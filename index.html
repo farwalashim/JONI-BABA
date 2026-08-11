@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joni Baba Store — Complete Artisan Experience</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+<style>
+:root{--dark:#121212;--leather:#8B4513;--accent:#D4AF37;--bg:#FDFCFB;--white:#FFFFFF;--grey:#6B7280;--light-grey:#E5E7EB;--radius:12px;}
+*{box-sizing:border-box;}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{margin:0;background:var(--bg);color:var(--dark);font-family:'Plus Jakarta Sans',sans-serif;overflow-x:hidden;width:100%;}
+img{max-width:100%;height:auto;display:block;}
+h1,h2,h3{font-family:'Playfair Display',serif;margin-top:0;}
+a{text-decoration:none;color:inherit;transition:0.3s;}
+button{cursor:pointer;border:none;font-family:inherit;transition:0.3s;touch-action:manipulation;}
+input,select,textarea{width:100%;padding:14px;border:1px solid var(--light-grey);border-radius:8px;margin-bottom:15px;font-family:inherit;font-size:15px;transition:0.3s;background:var(--white);color:var(--dark);}
+input:focus,select:focus,textarea:focus{border-color:var(--leather);outline:none;box-shadow:0 0 0 4px rgba(139,69,19,0.1);}
+
+header{background:rgba(255,255,255,0.96);backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);position:sticky;top:0;z-index:1000;border-bottom:1px solid var(--light-grey);width:100%;}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:15px 5%;max-width:1400px;margin:0 auto;width:100%;}
+.brand-container{display:flex;align-items:center;gap:12px;cursor:pointer;}
+.logo-circle{width:48px;height:48px;background:var(--leather);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;border:2px solid var(--accent);transition:0.5s;flex-shrink:0;}
+.logo-text{font-size:20px;font-weight:800;color:var(--leather);letter-spacing:0.5px;transition:0.4s;white-space:nowrap;}
+.brand-container:hover .logo-circle{transform:rotate(360deg) scale(1.08);background:var(--dark);}
+.brand-container:hover .logo-text{color:var(--dark);transform:translateX(4px);}
+
+.nav-links{display:flex;gap:24px;list-style:none;font-size:13px;font-weight:700;text-transform:uppercase;margin:0;padding:0;}
+.nav-links a{position:relative;transition:0.3s;display:inline-block;padding:4px 0;}
+.nav-links a:hover{color:var(--leather);transform:translateY(-2px);}
+.nav-links a::after{content:'';position:absolute;width:0;height:2px;bottom:0;left:0;background-color:var(--leather);transition:0.3s;}
+.nav-links a:hover::after{width:100%;}
+
+.nav-actions{display:flex;gap:12px;align-items:center;}
+.hamburger-btn{display:none;background:none;width:42px;height:42px;align-items:center;justify-content:center;flex-direction:column;gap:5px;border-radius:8px;padding:8px;}
+.hamburger-btn span{display:block;width:22px;height:2px;background:var(--dark);transition:0.3s;}
+.hamburger-btn.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.hamburger-btn.open span:nth-child(2){opacity:0;}
+.hamburger-btn.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+.hero{min-height:80vh;display:flex;align-items:center;justify-content:space-between;padding:60px 8%;background:radial-gradient(circle at 80%, #f3efea 0%, var(--bg) 60%);overflow:hidden;gap:40px;max-width:1400px;margin:0 auto;}
+.hero-content{flex:1;max-width:600px;}
+.hero h1{font-size:clamp(32px,5vw,62px);line-height:1.15;margin-bottom:20px;transition:0.5s;cursor:default;}
+.hero h1:hover{transform:scale(1.02) skewX(-1deg);color:var(--leather);}
+.hero h1 em{color:var(--leather);font-style:italic;display:inline-block;transition:0.5s;}
+.hero h1:hover em{transform:rotate(-3deg) scale(1.05);}
+.hero p{font-size:clamp(15px,2vw,18px);color:var(--grey);margin-bottom:28px;line-height:1.6;}
+
+.hero-visual{position:relative;width:400px;height:400px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.magic-circle{width:360px;height:360px;border-radius:50%;overflow:hidden;position:relative;border:6px solid var(--white);box-shadow:0 25px 50px rgba(0,0,0,0.12);cursor:crosshair;}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity 1s ease-in-out;}
+.slide.active{opacity:1;}
+.slide img{width:100%;height:100%;object-fit:cover;transition:transform 0.2s ease-out;}
+
+section{padding:80px 8%;max-width:1400px;margin:0 auto;width:100%;}
+.section-title{text-align:center;margin-bottom:45px;}
+.section-title h2{font-size:clamp(28px,4vw,42px);margin:0;}
+
+.about-container{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;}
+.about-text-content h3{font-size:clamp(26px,3.5vw,36px);color:var(--leather);margin-bottom:15px;transition:0.4s;}
+.about-text-content p{font-size:16px;line-height:1.8;color:var(--grey);margin-bottom:25px;transition:0.4s;}
+.about-text-content:hover h3{transform:translateX(6px);}
+
+.about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px;}
+.stat-card{background:white;padding:18px 12px;border-radius:15px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,0.03);border:1px solid var(--light-grey);transition:0.4s;}
+.stat-card:hover{transform:translateY(-6px);border-color:var(--leather);background:var(--leather);color:white;}
+.stat-card h4{font-size:clamp(20px,2.5vw,26px);margin:0 0 4px 0;}
+.stat-card span{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;}
+
+.about-visual-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;position:relative;}
+.about-img-box{width:100%;height:220px;border-radius:18px;overflow:hidden;box-shadow:0 15px 35px rgba(0,0,0,0.08);transition:0.5s;}
+.about-img-box img{width:100%;height:100%;object-fit:cover;transition:0.5s;}
+.about-img-box:hover{transform:scale(1.04) rotate(1deg);z-index:10;}
+.about-img-box:hover img{transform:scale(1.12);filter:brightness(0.9);}
+.about-img-box:nth-child(2){margin-top:25px;}
+.about-img-box:nth-child(3){margin-top:-25px;}
+
+.products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:25px;}
+.card{position:relative;background:var(--white);border-radius:var(--radius);padding:15px;transition:0.4s;border:1px solid transparent;text-align:center;display:flex;flex-direction:column;justify-content:space-between;}
+.card:hover{transform:translateY(-8px);border-color:var(--leather);box-shadow:0 18px 36px rgba(0,0,0,0.06);}
+.card-img{position:relative;width:100%;aspect-ratio:1;border-radius:8px;overflow:hidden;margin-bottom:12px;cursor:pointer;background:#f8f6f3;}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:0.4s;}
+.card:hover .card-img img{transform:scale(1.06);}
+.card h3{font-size:15px;font-weight:700;margin:8px 0 4px 0;line-height:1.3;}
+.price{font-size:18px;font-weight:800;color:var(--leather);margin:6px 0;display:block;}
+.btn-main{background:var(--dark);color:white;padding:11px 20px;border-radius:8px;font-weight:600;font-size:14px;width:100%;display:inline-flex;align-items:center;justify-content:center;gap:8px;}
+.btn-main:hover{background:var(--leather);transform:translateY(-1px);}
+
+.heart-btn{position:absolute;top:22px;right:22px;background:rgba(255,255,255,0.95);border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;box-shadow:0 4px 12px rgba(0,0,0,0.12);transition:0.3s;border:none;}
+.heart-btn:hover{transform:scale(1.15);background:#ffffff;}
+.heart-btn.active svg{fill:#e63946;stroke:#e63946;}
+
+.demand-badge{display:inline-flex;align-items:center;gap:4px;background:#fff0f0;color:#d90429;font-size:11px;font-weight:700;padding:3px 8px;border-radius:20px;border:1px solid #fecdd3;}
+.sold-badge{display:inline-flex;align-items:center;gap:4px;background:#f0fdf4;color:#15803d;font-size:11px;font-weight:700;padding:3px 8px;border-radius:20px;border:1px solid #bbf7d0;}
+.rating-stars{display:flex;align-items:center;justify-content:center;gap:3px;color:#f59e0b;font-weight:700;font-size:13px;}
+
+.collection-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.collection-card{position:relative;height:380px;border-radius:var(--radius);overflow:hidden;cursor:pointer;background:#eee;}
+.collection-card img{width:100%;height:100%;object-fit:cover;transition:0.5s;}
+.collection-card:hover img{transform:scale(1.08);}
+.collection-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.75),transparent);display:flex;align-items:flex-end;padding:25px;color:white;}
+.collection-overlay h3{font-size:24px;margin:0;}
+#collectionViewer{display:none;}
+.back-btn{margin-bottom:25px;display:inline-flex;align-items:center;gap:8px;color:var(--leather);font-weight:700;cursor:pointer;font-size:15px;}
+
+@keyframes shipFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+.shipment-info{background:white;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px;border-radius:var(--radius);padding:40px;box-shadow:0 10px 40px rgba(0,0,0,0.03);}
+.ship-item{text-align:center;padding:20px;border-radius:15px;transition:0.4s;animation:shipFloat 4s ease-in-out infinite;}
+.ship-item:hover{transform:scale(1.03);background:#fffdf7;}
+.ship-item svg{color:var(--leather);margin-bottom:12px;}
+.ship-item h4{font-size:18px;margin:0 0 6px 0;font-weight:700;}
+.ship-item p{margin:0;color:var(--grey);font-size:14px;}
+
+#contact{background:linear-gradient(180deg,#fff,#f3efea);}
+.contact-container{display:grid;grid-template-columns:1fr 1.2fr;gap:40px;align-items:center;background:var(--white);padding:40px;border-radius:20px;box-shadow:0 20px 50px rgba(0,0,0,0.04);border:1px solid rgba(139,69,19,0.12);}
+.contact-info{padding:20px;border-radius:15px;transition:0.4s;}
+.contact-info:hover{background:#fffdf2;transform:translateY(-3px);}
+.contact-info h3{font-size:26px;color:var(--leather);margin-bottom:15px;}
+.contact-info p{margin-bottom:12px;font-size:15px;}
+
+.profile-section{background:#fff;padding:80px 8%;border-top:1px solid #eee;max-width:1400px;margin:0 auto;}
+.profile-container{display:grid;grid-template-columns:1fr 1.4fr;gap:50px;align-items:center;cursor:pointer;}
+.profile-image-wrapper{perspective:1000px;}
+.profile-img-3d{width:100%;height:480px;object-fit:cover;border-radius:15px;box-shadow:0 20px 40px rgba(0,0,0,0.15);transition:0.6s;}
+.profile-image-wrapper:hover .profile-img-3d{transform:rotateY(10deg) scale(1.02);}
+.profile-text h3{font-size:clamp(26px,3.5vw,36px);color:var(--leather);margin-bottom:12px;}
+.xp-tag{display:inline-block;background:#fff3e0;color:var(--leather);font-weight:700;font-size:12px;padding:4px 12px;border-radius:20px;margin-bottom:12px;text-transform:uppercase;}
+.profile-details{max-height:0;overflow:hidden;transition:0.8s ease;opacity:0;}
+.profile-container.active .profile-details{max-height:1000px;opacity:1;margin-top:20px;}
+
+.bags-promo-slider{background:#faf8f5;padding:70px 0;overflow:hidden;width:100%;}
+.bags-promo-slider h2{text-align:center;margin-bottom:40px;font-size:clamp(26px,4vw,38px);color:var(--leather);padding:0 5%;}
+.bags-slider{overflow:hidden;width:100%;}
+.bags-track{display:flex;gap:25px;width:max-content;animation:bagSlide 30s linear infinite;}
+.bags-slider:hover .bags-track{animation-play-state:paused;}
+.bag-slide{width:320px;height:400px;border-radius:18px;overflow:hidden;position:relative;flex-shrink:0;box-shadow:0 15px 35px rgba(0,0,0,0.1);cursor:pointer;transition:0.4s;}
+.bag-slide img{width:100%;height:100%;object-fit:cover;transition:0.7s;}
+.bag-slide:hover img{transform:scale(1.1);}
+.bag-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.75),rgba(0,0,0,0.15));display:flex;flex-direction:column;justify-content:flex-end;padding:24px;color:#fff;}
+.bag-overlay h3{margin:0;font-size:22px;}
+.bag-overlay p{margin:6px 0 0 0;color:#f5f5f5;font-size:14px;}
+@keyframes bagSlide{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+
+.main-footer{background:#0a0a0a;color:white;padding:70px 8% 30px;}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:35px;border-bottom:1px solid #222;padding-bottom:45px;max-width:1400px;margin:0 auto;}
+.footer-col h4{color:var(--accent);margin-bottom:20px;font-size:15px;text-transform:uppercase;letter-spacing:0.5px;}
+.footer-links{list-style:none;padding:0;margin:0;}
+.footer-links li{margin-bottom:12px;}
+.footer-links a{color:#888;transition:0.3s;font-size:14px;}
+.footer-links a:hover{color:white;}
+.footer-links a.social-link{display:inline-flex;align-items:center;gap:8px;}
+.footer-links a.social-link svg{flex-shrink:0;transition:0.3s;}
+.footer-links a.social-link:hover svg{transform:scale(1.15);}
+.footer-bottom{padding-top:25px;text-align:center;color:#888;font-size:13px;max-width:1400px;margin:0 auto;}
+
+.drawer{position:fixed;top:0;right:0;height:100%;width:440px;max-width:100vw;background:white;z-index:2000;transform:translateX(100%);transition:0.4s ease;padding:25px;display:flex;flex-direction:column;box-shadow:-15px 0 40px rgba(0,0,0,0.15);}
+.drawer.open{transform:translateX(0);}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:1500;display:none;backdrop-filter:blur(4px);}
+.overlay.open{display:block;}
+.toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:var(--leather);color:white;padding:12px 30px;border-radius:50px;font-weight:600;display:none;z-index:3000;text-align:center;max-width:90%;box-shadow:0 10px 25px rgba(0,0,0,0.2);font-size:14px;}
+
+.checkout-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;border-bottom:1px solid var(--light-grey);padding-bottom:12px;}
+.checkout-header h3{margin:0;font-size:20px;}
+.form-group-title{font-size:12px;text-transform:uppercase;color:var(--leather);font-weight:800;margin-bottom:10px;border-bottom:1px solid var(--light-grey);padding-bottom:4px;letter-spacing:0.5px;}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.payment-method-card{border:2px solid var(--light-grey);padding:12px;border-radius:8px;margin-bottom:10px;cursor:pointer;display:flex;gap:10px;align-items:center;}
+.payment-method-card.selected{border-color:var(--leather);background:#fff9f5;}
+
+.product-modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.65);backdrop-filter:blur(5px);z-index:2500;display:none;align-items:center;justify-content:center;padding:20px;}
+.product-modal-overlay.open{display:flex;}
+.product-modal-card{background:white;width:100%;max-width:680px;border-radius:16px;overflow:hidden;display:grid;grid-template-columns:1fr 1.1fr;position:relative;box-shadow:0 25px 50px rgba(0,0,0,0.25);max-height:90vh;}
+
+.qty-stepper{display:flex;align-items:center;gap:0;border:1px solid var(--light-grey);border-radius:8px;overflow:hidden;width:fit-content;margin-bottom:16px;}
+.qty-stepper button{background:#f3efea;color:var(--leather);width:36px;height:36px;font-size:18px;font-weight:800;display:flex;align-items:center;justify-content:center;}
+.qty-stepper button:hover{background:var(--leather);color:white;}
+.qty-stepper span{width:40px;text-align:center;font-weight:700;font-size:15px;}
+.wishlist-item-actions{display:flex;gap:6px;align-items:center;}
+
+/* Floating quick-checkout button so cart/checkout is reachable without scrolling back to the top navbar */
+.fab-cart{position:fixed;bottom:24px;right:24px;z-index:1400;background:var(--leather);color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 25px rgba(0,0,0,0.28);transition:0.3s;}
+.fab-cart:hover{background:var(--dark);transform:translateY(-3px);}
+.fab-cart .fab-badge{position:absolute;top:-4px;right:-4px;background:#d90429;color:white;font-size:11px;font-weight:800;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid #fff;}
+
+/* ===== RESPONSIVE MEDIA QUERIES ===== */
+@media (max-width: 1200px) {
+  .hero{padding:50px 6%;gap:30px;}
+  .hero-visual{width:340px;height:340px;}
+  .magic-circle{width:300px;height:300px;}
+  section{padding:60px 6%;}
+  .footer-grid{grid-template-columns:1.5fr 1fr 1fr 1fr;}
+}
+
+@media (max-width: 992px) {
+  .nav-links{position:fixed;top:76px;left:0;width:100%;background:white;flex-direction:column;gap:0;padding:0;max-height:0;overflow:hidden;transition:0.4s ease;box-shadow:0 10px 25px rgba(0,0,0,0.08);z-index:999;border-bottom:1px solid var(--light-grey);}
+  .nav-links.open{max-height:450px;padding:10px 0;}
+  .nav-links li{width:100%;text-align:center;}
+  .nav-links a{display:block;padding:12px 20px;font-size:14px;}
+  .nav-links a::after{display:none;}
+  .hamburger-btn{display:flex;}
+
+  .hero{flex-direction:column;text-align:center;padding:35px 5% 45px;min-height:auto;gap:25px;}
+  .hero-content{max-width:100%;order:2;}
+  .hero-visual{order:1;margin:0 auto;width:200px;height:200px;}
+  .magic-circle{width:100%;height:100%;}
+
+  .about-container,.contact-container,.profile-container{grid-template-columns:1fr;gap:30px;}
+  .about-visual-grid{margin-top:10px;grid-template-columns:repeat(2,1fr);gap:12px;}
+  .about-img-box:nth-child(2),.about-img-box:nth-child(3){margin-top:0;}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:30px;}
+  .product-modal-card{grid-template-columns:1fr;max-height:90vh;overflow-y:auto;}
+  .product-modal-card > div:first-child{min-height:220px;}
+}
+
+@media (max-width: 768px) {
+  html, body { overflow-x: hidden; width: 100%; max-width: 100vw; }
+  .nav{padding:12px 4%;}
+  .logo-text{font-size:16px;}
+  .logo-circle{width:40px;height:40px;font-size:15px;}
+  section{padding:30px 4%;max-width:100vw;overflow-x:hidden;}
+  
+  .hero{padding:25px 4% 35px;gap:20px;}
+  .hero h1{font-size:28px;margin-bottom:12px;}
+  .hero p{font-size:14px;margin-bottom:18px;}
+  .hero-visual{width:180px;height:180px;}
+
+  /* Crafting a Legacy - 2 on top, 2 on bottom */
+  .about-visual-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:10px;}
+  .about-img-box{height:160px;width:100%;border-radius:12px;}
+  .about-img-box:nth-child(2),.about-img-box:nth-child(3){margin-top:0;}
+
+  /* Collections - 3 in 1 row on mobile */
+  .collection-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+  .collection-card{height:180px;width:100%;border-radius:10px;}
+  .collection-overlay{padding:10px 6px;justify-content:center;text-align:center;}
+  .collection-overlay h3{font-size:13px;}
+
+  /* Products Grid - Clean 2-column responsive layout for mobile */
+  .products-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
+  .card{padding:10px;border-radius:10px;width:100%;}
+  .card h3{font-size:12px;margin:5px 0 2px 0;line-height:1.2;height:28px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;}
+  .price{font-size:14px;margin:4px 0;}
+  .demand-badge,.sold-badge{font-size:9px;padding:2px 5px;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis;}
+  .rating-stars{font-size:11px;}
+  .btn-main{padding:8px 4px;font-size:11px;border-radius:6px;width:100%;}
+  .card button:last-child{padding:0 6px;font-size:11px;border-radius:6px;}
+  .heart-btn{width:28px;height:28px;top:10px;right:10px;}
+  .heart-btn svg{width:14px;height:14px;}
+
+  .about-stats{grid-template-columns:repeat(3,1fr);gap:8px;}
+  .stat-card{padding:12px 6px;}
+  .stat-card h4{font-size:18px;}
+  .stat-card span{font-size:10px;}
+  .shipment-info{grid-template-columns:1fr;padding:20px;gap:15px;}
+  .contact-container{padding:20px;}
+  .profile-img-3d{height:260px;}
+  .drawer{width:100%;padding:20px;}
+  .bag-slide{width:220px;height:280px;}
+  .bag-overlay h3{font-size:16px;}
+
+  /* Footer Responsive Styles */
+  .main-footer{padding:35px 4% 20px;}
+  .footer-grid{grid-template-columns:repeat(3, 1fr);text-align:center;gap:20px 8px;padding-bottom:25px;}
+  .footer-col:first-child{grid-column:1 / -1;margin-bottom:10px;}
+  .brand-container{justify-content:center;}
+  .footer-col h4{margin-bottom:10px;font-size:12px;letter-spacing:0;}
+  .footer-links li{margin-bottom:6px;}
+  .footer-links a{font-size:11px;}
+  .footer-links a.social-link{justify-content:center;}
+  .footer-bottom{padding-top:18px;font-size:11px;line-height:1.5;}
+
+  .fab-cart{width:50px;height:50px;bottom:16px;right:16px;}
+}
+
+@media (max-width: 576px) {
+  .hero{padding:20px 4% 30px;gap:15px;}
+  .hero h1{font-size:24px;margin-bottom:10px;}
+  .hero p{font-size:13px;margin-bottom:14px;}
+  .hero-visual{width:150px;height:150px;}
+
+  .about-stats{grid-template-columns:1fr;}
+  .about-visual-grid{grid-template-columns:repeat(2,1fr);gap:8px;}
+  .about-img-box{height:130px;}
+
+  .collection-grid{grid-template-columns:repeat(3,1fr);gap:6px;}
+  .collection-card{height:150px;}
+  .collection-overlay h3{font-size:11px;}
+
+  .products-grid{grid-template-columns:repeat(2,1fr);gap:8px;}
+  .card{padding:8px 6px;}
+  .card h3{font-size:11px;height:26px;}
+  .price{font-size:13px;}
+  .btn-main{padding:7px 2px;font-size:10px;}
+  .card button:last-child{padding:0 4px;font-size:10px;}
+
+  .grid-2{grid-template-columns:1fr;}
+  .main-footer{padding:30px 4% 18px;}
+  .footer-grid{grid-template-columns:repeat(3, 1fr);text-align:center;gap:18px 6%;padding-bottom:20px;}
+  .footer-col:first-child{grid-column:1 / -1;margin-bottom:8px;}
+  .brand-container{justify-content:center;}
+  .footer-col h4{font-size:11px;margin-bottom:8px;}
+  .footer-links a{font-size:10px;}
+  .footer-bottom{font-size:11px;}
+  .bag-slide{width:180px;height:240px;}
+}
+
+@media (max-width: 380px) {
+  .logo-text{display:none;}
+  .hero h1{font-size:23px;}
+  .hero-visual{width:140px;height:140px;}
+
+  .collection-card{flex:0 0 135px !important;min-width:135px !important;height:170px !important;}
+  .card{flex:0 0 145px !important;min-width:145px !important;width:145px !important;}
+  .about-img-box{height:120px;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <div class="brand-container" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+      <div class="logo-circle">JB</div>
+      <span class="logo-text">JONI BABA STORE</span>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#top" onclick="closeNav()">Home</a></li>
+      <li><a href="#about" onclick="closeNav()">About</a></li>
+      <li><a href="#shop" onclick="closeNav()">Shop</a></li>
+      <li><a href="#collections" onclick="closeNav()">Collections</a></li>
+      <li><a href="#shipment" onclick="closeNav()">Shipment</a></li>
+      <li><a href="#contact" onclick="closeNav()">Contact</a></li>
+      <li><a href="#profile" onclick="closeNav()">Profile</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button onclick="openDrawer('wishlistDrawer')" style="background:none; position:relative; padding:6px;" title="View Favorites">
+        <svg width="26" height="26" fill="none" stroke="#8B4513" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+        </svg>
+        <span id="wishlistCount" style="position:absolute; top:-3px; right:-3px; background:#d90429; color:white; font-size:10px; font-weight:700; width:18px; height:18px; border-radius:50%; display:flex; align-items:center; justify-content:center;">0</span>
+      </button>
+
+      <button onclick="openDrawer('cartDrawer')" style="background:none; position:relative; padding:6px;" title="View Cart">
+        <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+        <span id="cartCount" style="position:absolute; top:-3px; right:-3px; background:var(--leather); color:white; font-size:10px; font-weight:700; width:18px; height:18px; border-radius:50%; display:flex; align-items:center; justify-content:center;">0</span>
+      </button>
+
+      <button class="hamburger-btn" id="hamburgerBtn" onclick="toggleNav()" aria-label="Toggle Navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Hand-Stitched<br><em>Leather</em> Heritage.</h1>
+      <p>Luxury goods made to order in our Multan workshop. We use premium vegetable-tanned hides for products that last a generation.</p>
+      <a href="#shop" class="btn-main" style="display:inline-flex; width:auto;">Shop the Collection</a>
+    </div>
+    <div class="hero-visual">
+      <div class="magic-circle" id="magicCircle">
+        <div class="slide active"><img src="https://scontent.fmux1-1.fna.fbcdn.net/v/t39.30808-6/763018721_122102889039420835_2444746032562117336_n.jpg?stp=dst-jpg_tt6&cstp=mx1024x827&ctp=s1024x827&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=U0O3F_sUvnIQ7kNvwHBXey6&_nc_oc=Ado3o_Sq128v3ax6Raf0VTqoISjK20YF2CdMdc0NzXYGNW3gIr61m6qHzOZC6DRsqi4BeEfcccggEbY6_BwDSAIl&_nc_zt=23&_nc_ht=scontent.fmux1-1.fna&_nc_gid=tw9c8NX2LU-x4MV4zaOtCQ&_nc_ss=7b2a8&oh=00_AQF_S7qATsft1usp9ves_-32CXclCf0PfZBVTAlUAWedyw&oe=6A78AC18" class="tilt-img" alt="Leather Store"></div>
+        <div class="slide"><img src="https://scontent.fmux1-1.fna.fbcdn.net/v/t39.30808-6/763861512_122102888757420835_4662829809362533792_n.jpg?stp=dst-jpg_tt6&cstp=mx718x1084&ctp=s718x1084&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=vYF8OP45cpMQ7kNvwFzTQSK&_nc_oc=AdrW6PMl1vy9JqKJp61QqebOXNtIA2EWT2_txAOgIzvDalNJi8K38Maxanvoc0wm-Dd7KkiNn97Wc15lLEm9z5AE&_nc_zt=23&_nc_ht=scontent.fmux1-1.fna&_nc_gid=T2wGHxwjHqUmCEwXTA9sYA&_nc_ss=7b2a8&oh=00_AQEPg-XLYLWDVT691l9gNdfjjC9dkn19JttsUgKBaf4Vow&oe=6A78AC39" class="tilt-img" alt="Leather Craft"></div>
+        <div class="slide"><img src="https://scontent.fmux1-1.fna.fbcdn.net/v/t39.30808-6/763824656_122102885829420835_2302524882881273023_n.jpg?stp=dst-jpg_tt6&cstp=mx726x1084&ctp=s726x1084&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=tMx97z5sHjAQ7kNvwESwNBz&_nc_oc=AdpgWRSPuWmMwRXrBHzXVHoiar1cumhJHFwqVjAXkW2O-JaU-WJm7wPw84Jy6RmCSeAEFQ-JDjH4x1DBl9lCqwtF&_nc_zt=23&_nc_ht=scontent.fmux1-1.fna&_nc_gid=DCjFPol0JOt9k7hNYe6y3w&_nc_ss=7b2a8&oh=00_AQHTpV2yUL9wccOb7nvcp9g5Z3HOQ1bXqMbJB0JH9N4RAQ&oe=6A78BE02" class="tilt-img" alt="Leather bag"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="section-title"><h2>The Artisan Story</h2></div>
+    <div class="about-container">
+      <div class="about-text-content">
+        <h3>Crafting a <em>Legacy</em>.</h3>
+        <p>Born in the heart of Multan, JB Store is more than just a brand; it's a tribute to the timeless art of hand-stitching. Every piece we create tells a story of patience, precision, and passion.</p>
+        <div class="about-stats">
+          <div class="stat-card"><h4>100%</h4><span>Hand Stitched</span></div>
+          <div class="stat-card"><h4>Premium</h4><span>Full Grain</span></div>
+          <div class="stat-card"><h4>Multan</h4><span>Heritage Made</span></div>
+        </div>
+      </div>
+      <div class="about-visual-grid">
+        <div class="about-img-box"><img src="https://scontent.fmux1-1.fna.fbcdn.net/v/t39.30808-6/767300916_122102891847420835_5844784415393349470_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x1024&ctp=s1536x1024&_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=t3xdyQzPwhQQ7kNvwFae5nR&_nc_oc=Adq2Oeawfrcbj9OLuxgc_TtKBKurx0awgk9ZQHIZSSyTxAI9mD12oJtshlhwK-kHdhfc7R8NALQUVyv1siyoXR9i&_nc_zt=23&_nc_ht=scontent.fmux1-1.fna&_nc_gid=HdxzjQhULnepIRKvs27Fsg&_nc_ss=7b2a8&oh=00_AQGcd4-u5n0CTKlDtlPzqxv3GslfO8BrlNPHmeF6vyg7bw&oe=6A78B3C4" alt="Detail 1"></div>
+        <div class="about-img-box"><img src="https://images.unsplash.com/photo-1624222247344-550fb60583dc?auto=format&fit=crop&w=500&q=80" alt="Detail 2"></div>
+        <div class="about-img-box"><img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=500&q=80" alt="Detail 3"></div>
+        <div class="about-img-box"><img src="https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=500&q=80" alt="Detail 4"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="shop">
+    <div class="section-title"><h2>Premium Essentials</h2></div>
+    <div class="products-grid" id="productsGrid"></div>
+  </section>
+
+  <section id="collections" style="background: #fdfcfb;">
+    <div id="collectionMain">
+      <div class="section-title"><h2>Our Collections</h2></div>
+      <div class="collection-grid">
+        <div class="collection-card" onclick="openCollection('watches')">
+          <img src="https://matrixtimepiece.in/cdn/shop/files/9-A_f9a0de9b-3759-4181-8685-e6206607bbed.jpg?v=1784532836&width=533" alt="Watches">
+          <div class="collection-overlay"><h3>Leather Watches</h3></div>
+        </div>
+        <div class="collection-card" onclick="openCollection('belts')">
+          <img src="https://mender.pk/wp-content/uploads/2026/05/IMG_3031-400x400.jpg" alt="Belts">
+          <div class="collection-overlay"><h3>Premium Belts</h3></div>
+        </div>
+        <div class="collection-card" onclick="openCollection('wallets')">
+          <img src="https://mender.pk/wp-content/uploads/2021/01/15-800x800.png" alt="Wallets">
+          <div class="collection-overlay"><h3>Artisan Wallets</h3></div>
+        </div>
+      </div>
+    </div>
+    <div id="collectionViewer">
+      <div class="back-btn" onclick="closeCollection()">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg> Back to Collections
+      </div>
+      <div class="section-title"><h2 id="colTitle">Collection</h2></div>
+      <div class="products-grid" id="collectionGrid"></div>
+    </div>
+  </section>
+
+  <section id="shipment" style="background: white;">
+    <div class="section-title"><h2>Shipping Information</h2></div>
+    <div class="shipment-info">
+      <div class="ship-item">
+        <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <h4>Fast Delivery</h4>
+        <p>3-5 working days across Pakistan.</p>
+      </div>
+      <div class="ship-item">
+        <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+        <h4>Secure Packing</h4>
+        <p>Premium dust bags and rigid box.</p>
+      </div>
+      <div class="ship-item">
+        <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+        <h4>Easy Payment</h4>
+        <p>COD, EasyPaisa & Bank Transfer.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-title"><h2>Get in Touch</h2></div>
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3>Workshop Info</h3>
+        <p><strong>Location:</strong> Multan, Pakistan</p>
+        <p><strong>WhatsApp:</strong> +92 325 0232003</p>
+        <p><strong>Experience:</strong> Hand-Stitched Tradition Since 2014.</p>
+      </div>
+      <form onsubmit="event.preventDefault(); alert('Message Sent!'); this.reset();">
+        <h4 style="margin-top:0; margin-bottom:15px;">Send us a Message</h4>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn-main">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="profile" class="profile-section">
+    <div class="section-title"><h2>The Artisan Profile</h2></div>
+    <div class="profile-container" onclick="this.classList.toggle('active')">
+      <div class="profile-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Owner" class="profile-img-3d">
+      </div>
+      <div class="profile-text">
+        <span class="xp-tag">Master of Craft since 2014</span>
+        <h3>The Soul Behind Joni Baba Store</h3>
+        <p>My journey into leather crafting began in <strong>2014</strong>. What started as a small personal passion for handmade goods soon became a lifelong commitment to quality and tradition in the heart of Multan.</p>
+        <p style="margin-top:20px; color:var(--leather); font-weight:700;">Click to read our full story & experience ↓</p>
+        <div class="profile-details">
+          <p>For more than a decade, I have focused on 'Saddle Stitching'—a traditional hand-sewing technique that is impossible for machines to replicate. Every item at Joni Baba Store is hand-selected and hand-stitched to ensure it carries the spirit of true craftsmanship.</p>
+          <p style="margin-top:15px;">Today, we stand as a symbol of heritage in Pakistan. Our goal is to provide goods that don't just age, but develop a beautiful story with every year you use them.</p>
+          <p style="margin-top:10px;"><strong>Expertise:</strong> Hand-Stitching, Patina Art, Bespoke Leatherwork.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bags-promo-slider">
+    <h2>Explore Our Signature Leather Bags</h2>
+    <div class="bags-slider">
+      <div class="bags-track">
+        <div class="bag-slide">
+          <img src="https://scontent.fmux1-1.fna.fbcdn.net/v/t39.30808-6/763018721_122102889039420835_2444746032562117336_n.jpg?stp=dst-jpg_tt6&cstp=mx1024x827&ctp=s1024x827&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=U0O3F_sUvnIQ7kNvwHBXey6&_nc_oc=Ado3o_Sq128v3ax6Raf0VTqoISjK20YF2CdMdc0NzXYGNW3gIr61m6qHzOZC6DRsqi4BeEfcccggEbY6_BwDSAIl&_nc_zt=23&_nc_ht=scontent.fmux1-1.fna&_nc_gid=tw9c8NX2LU-x4MV4zaOtCQ&_nc_ss=7b2a8&oh=00_AQF_S7qATsft1usp9ves_-32CXclCf0PfZBVTAlUAWedyw&oe=6A78AC18">
+          <div class="bag-overlay"><h3>Luxury Travel Duffle</h3><p>Hand-Stitched Premium Leather</p></div>
+        </div>
+        <div class="bag-slide">
+          <img src="https://scontent.fmux1-1.fna.fbcdn.net/v/t39.30808-6/763861512_122102888757420835_4662829809362533792_n.jpg?stp=dst-jpg_tt6&cstp=mx718x1084&ctp=s718x1084&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=vYF8OP45cpMQ7kNvwFzTQSK&_nc_oc=AdrW6PMl1vy9JqKJp61QqebOXNtIA2EWT2_txAOgIzvDalNJi8K38Maxanvoc0wm-Dd7KkiNn97Wc15lLEm9z5AE&_nc_zt=23&_nc_ht=scontent.fmux1-1.fna&_nc_gid=T2wGHxwjHqUmCEwXTA9sYA&_nc_ss=7b2a8&oh=00_AQEPg-XLYLWDVT691l9gNdfjjC9dkn19JttsUgKBaf4Vow&oe=6A78AC39">
+          <div class="bag-overlay"><h3>Executive Laptop Bag</h3><p>Crafted For Professionals</p></div>
+        </div>
+        <div class="bag-slide">
+          <img src="https://scontent.fmux1-1.fna.fbcdn.net/v/t39.30808-6/765929593_122102879415420835_3364534993678127596_n.jpg?stp=dst-jpg_tt6&cstp=mx339x269&ctp=s339x269&_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=zpeAISaEW2cQ7kNvwEnSxqm&_nc_oc=AdrAPb4XmZjP5LGG8eHjcmkN0sivz1uTqq0piaQahY7zUgF_Rx-1gfusfWtyDg4vdks-5EkCAJ2GVx2UP-41Kmro&_nc_zt=23&_nc_ht=scontent.fmux1-1.fna&_nc_gid=CBZFM9L0mKeGr09_EvQO6A&_nc_ss=7b2a8&oh=00_AQHQxU73Ken1KP9Cia7V0At4Cvi1OICPsLFYiouD0dsyEg&oe=6A78B417">
+          <div class="bag-overlay"><h3>Classic Messenger</h3><p>Modern Heritage Collection</p></div>
+        </div>
+        <div class="bag-slide">
+          <img src="https://scontent.fmux1-1.fna.fbcdn.net/v/t39.30808-6/763824656_122102885829420835_2302524882881273023_n.jpg?stp=dst-jpg_tt6&cstp=mx726x1084&ctp=s726x1084&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=tMx97z5sHjAQ7kNvwESwNBz&_nc_oc=AdpgWRSPuWmMwRXrBHzXVHoiar1cumhJHFwqVjAXkW2O-JaU-WJm7wPw84Jy6RmCSeAEFQ-JDjH4x1DBl9lCqwtF&_nc_zt=23&_nc_ht=scontent.fmux1-1.fna&_nc_gid=DCjFPol0JOt9k7hNYe6y3w&_nc_ss=7b2a8&oh=00_AQHTpV2yUL9wccOb7nvcp9g5Z3HOQ1bXqMbJB0JH9N4RAQ&oe=6A78BE02">
+          <div class="bag-overlay"><h3>Premium Leather Tote</h3><p>Elegant Everyday Carry</p></div>
+        </div>
+        <!-- Duplicates for smooth infinite loop -->
+        <div class="bag-slide">
+          <img src="https://scontent.fmux1-1.fna.fbcdn.net/v/t39.30808-6/765872363_122102880987420835_4785492031482900222_n.jpg?stp=dst-jpg_tt6&cstp=mx345x276&ctp=s345x276&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=AXGuqqXGsFoQ7kNvwHk7PLO&_nc_oc=Adpg4rkBm3_AIUnSxg_F5tAYh3-l2MZRJUqIqWoauwmgQsfkxpaXd4afF8Mh36gwF0qC3GMtcwg-WEr1pPb4N7Sf&_nc_zt=23&_nc_ht=scontent.fmux1-1.fna&_nc_gid=hlK5PBYXHFBCRsLo6ofRzQ&_nc_ss=7b2a8&oh=00_AQEY6D8tnwOgh0E6i1X7zLOyET0GaVbDOoKZhorFwseXTQ&oe=6A78B752">
+          <div class="bag-overlay"><h3>Luxury Travel Duffle</h3><p>Hand-Stitched Premium Leather</p></div>
+        </div>
+        <div class="bag-slide">
+          <img src="https://scontent.fmux1-1.fna.fbcdn.net/v/t39.30808-6/763177239_122102881473420835_4809657009089998491_n.jpg?stp=dst-jpg_tt6&cstp=mx347x276&ctp=s347x276&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=sy6LVCaIwxkQ7kNvwErYdpf&_nc_oc=AdrUGwzxuSt_NE2J-NTngfK7NItqLD_aymGywGEZwYFQbRQzJg0zPmBTvV4_LWKo6O4Z3MDfCOJ9o9qnqscPfMU4&_nc_zt=23&_nc_ht=scontent.fmux1-1.fna&_nc_gid=eofUGlP9xfbOGg8BhDLB-g&_nc_ss=7b2a8&oh=00_AQFoU-tqnR2TqSBMB_pur9MFaSfHAFyMiz-n2kpfB8Y-Ig&oe=6A78A4C2">
+          <div class="bag-overlay"><h3>Executive Laptop Bag</h3><p>Crafted For Professionals</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="main-footer">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <div class="brand-container" style="margin-bottom:20px;">
+        <div class="logo-circle">JB</div>
+        <span class="logo-text" style="color:white;">JONI BABA STORE</span>
+      </div>
+      <p style="color:#888; font-size:14px; line-height:1.6; margin-top:0;">Premium hand-stitched leather goods from Multan. We craft heritage that lasts generations since 2014.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul class="footer-links">
+        <li><a href="#top">Home</a></li>
+        <li><a href="#about">Artisan Story</a></li>
+        <li><a href="#shop">New Arrivals</a></li>
+        <li><a href="#profile">The Maker</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Customer Support</h4>
+      <ul class="footer-links">
+        <li><a href="#shipment">Shipping Info</a></li>
+        <li><a href="#contact">Contact Support</a></li>
+        <li><a href="#top">Terms & Privacy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>CONTACT</h4>
+      <ul class="footer-links">
+        <li><a class="social-link" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path><path d="M17.5 6.5h.01"></path></svg>
+          Instagram
+        </a></li>
+        <li><a class="social-link" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg>
+          Facebook
+        </a></li>
+        <li><a class="social-link" href="https://wa.me/923250232003" target="_blank" rel="noopener noreferrer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path></svg>
+          WhatsApp
+        </a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 JONI BABA STORE | Hand-Stitched Excellence | Multan, Pakistan</p>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay" onclick="closeAll()"></div>
+
+<!-- Floating quick-access cart button: keeps checkout reachable anywhere on the page without scrolling back up to the navbar -->
+<button class="fab-cart" onclick="openDrawer('cartDrawer')" title="View Cart & Checkout">
+  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+  <span class="fab-badge" id="fabCartCount">0</span>
+</button>
+
+<aside class="drawer" id="wishlistDrawer">
+  <div class="checkout-header">
+    <h3 style="display:flex; align-items:center; gap:8px;">
+      <svg width="22" height="22" fill="#e63946" stroke="#e63946" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+      Wishlist & Demands
+    </h3>
+    <span onclick="closeAll()" style="cursor:pointer; font-size:24px; font-weight:700;">&times;</span>
+  </div>
+  <div id="wishlistItems" style="flex:1; overflow-y:auto;"></div>
+</aside>
+
+<aside class="drawer" id="cartDrawer">
+  <div class="checkout-header">
+    <h3>Shopping Bag</h3>
+    <span onclick="closeAll()" style="cursor:pointer; font-size:24px; font-weight:700;">&times;</span>
+  </div>
+  <div id="cartItems" style="flex:1; overflow-y:auto;"></div>
+  <div style="border-top:1px solid #eee; padding-top:20px; margin-top:10px;">
+    <div style="display:flex; justify-content:space-between; font-weight:800; margin-bottom:20px; font-size: 20px;">
+      <span>Subtotal:</span><span id="cartTotal">Rs. 0.00</span>
+    </div>
+    <button class="btn-main" onclick="openCheckout()" style="height:52px; font-size:16px;">Secure Checkout</button>
+  </div>
+</aside>
+
+<aside class="drawer" id="checkoutDrawer">
+  <div class="checkout-header">
+    <h3>Checkout</h3>
+    <span onclick="closeAll()" style="cursor:pointer; font-size:24px; font-weight:700;">&times;</span>
+  </div>
+  
+  <form onsubmit="confirmOrder(event)" style="flex:1; overflow-y:auto; padding-right:5px;">
+    <div class="checkout-section">
+      <div class="form-group-title">Personal Information</div>
+      <input type="text" placeholder="Full Name" required>
+      <div class="grid-2">
+        <input type="tel" placeholder="Phone Number" required>
+        <input type="email" placeholder="Email Address" required>
+      </div>
+    </div>
+
+    <div class="checkout-section">
+      <div class="form-group-title">Shipping Details</div>
+      <div class="grid-2">
+        <input type="text" placeholder="City" required>
+        <select required>
+          <option value="" disabled selected>Province</option>
+          <option>Punjab</option>
+          <option>Sindh</option>
+          <option>KPK</option>
+          <option>Balochistan</option>
+        </select>
+      </div>
+      <textarea placeholder="Complete Home Address & Landmark" rows="3" required></textarea>
+    </div>
+
+    <div class="checkout-section">
+      <div class="form-group-title">Payment Method</div>
+      <div class="payment-options">
+        <div class="payment-method-card selected" onclick="selectPayment(this)">
+          <input type="radio" name="pay" checked>
+          <div><strong>Cash on Delivery</strong><small style="display:block; color:#666;">Pay at your doorstep.</small></div>
+        </div>
+        <div class="payment-method-card" onclick="selectPayment(this)">
+          <input type="radio" name="pay">
+          <div><strong>EasyPaisa / JazzCash</strong><small style="display:block; color:#666;">Mobile Wallet Transfer.</small></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="order-summary-box" style="background:#f3efea; padding:15px; border-radius:10px; margin-top:15px;">
+      <div style="display:flex; justify-content:space-between; margin-bottom:8px; font-size:14px;">
+        <span>Order Amount:</span><span id="summaryTotal">Rs. 0.00</span>
+      </div>
+      <div style="display:flex; justify-content:space-between; font-weight:800; font-size:18px; border-top:1px solid #ddd; padding-top:10px;">
+        <span>Grand Total:</span><span id="summaryGrandTotal">Rs. 0.00</span>
+      </div>
+    </div>
+
+    <button type="submit" class="btn-main" style="margin-top:20px; height:52px; background:var(--leather);">Place Order Now</button>
+  </form>
+</aside>
+
+<div class="product-modal-overlay" id="productModalOverlay" onclick="closeModal()">
+  <div class="product-modal-card" onclick="event.stopPropagation()">
+    <button onclick="closeModal()" style="position:absolute; top:12px; right:12px; background:rgba(0,0,0,0.6); color:white; border:none; border-radius:50%; width:32px; height:32px; cursor:pointer; z-index:10; font-size:20px; display:flex; align-items:center; justify-content:center;">&times;</button>
+    <div style="height:100%; min-height:220px; display:flex; flex-direction:column; background:#f9f8f6;">
+      <div style="flex:1; overflow:hidden;">
+        <img id="modalImg" src="" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+      <div id="modalThumbs" style="display:flex; gap:6px; padding:8px; background:#fff; overflow-x:auto;"></div>
+    </div>
+    <div style="padding:22px; display:flex; flex-direction:column; justify-content:space-between; overflow-y:auto;">
+      <div>
+        <div style="display:flex; gap:8px; margin-bottom:8px; flex-wrap:wrap;">
+          <span id="modalDemand" class="demand-badge"></span>
+          <span id="modalSold" class="sold-badge"></span>
+        </div>
+        <h2 id="modalTitle" style="margin:5px 0 2px 0; font-size:20px;"></h2>
+        <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
+          <div class="rating-stars">★ <span id="modalRating"></span></div>
+          <span id="modalReviews" style="font-size:12px; color:#6b7280;"></span>
+        </div>
+        <div id="modalPrice" style="font-size:22px; font-weight:800; color:var(--leather); margin-bottom:10px;"></div>
+        <p id="modalDesc" style="font-size:13px; color:#4b5563; line-height:1.5; margin-bottom:14px;"></p>
+
+        <div class="form-group-title" style="margin-bottom:8px;">Quantity</div>
+        <div class="qty-stepper">
+          <button type="button" onclick="changeModalQty(-1)">&minus;</button>
+          <span id="modalQty">1</span>
+          <button type="button" onclick="changeModalQty(1)">+</button>
+        </div>
+      </div>
+      <button id="modalAddBtn" class="btn-main">Add to Bag</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast">Added to Bag!</div>
+
+<script>
+const FB_IMG = (id, params) => `https://scontent.fmux1-1.fna.fbcdn.net/v/t39.30808-6/${id}?stp=dst-jpg_tt6&${params}`;
+const FLY1 = (id, params) => `https://scontent.flyp6-1.fna.fbcdn.net/v/t39.30808-6/${id}?stp=dst-jpg_tt6&${params}`;
+const FLY2 = (id, params) => `https://scontent.flyp6-2.fna.fbcdn.net/v/t39.30808-6/${id}?stp=dst-jpg_tt6&${params}`;
+const PRODUCTS = [
+  {id:1, name:'CLASSIC LEATHER BACKPACK DUO', price:2999, img:'https://scontent.fmux1-1.fna.fbcdn.net/v/t39.30808-6/767300916_122102891847420835_5844784415393349470_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x1024&ctp=s1536x1024&_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=t3xdyQzPwhQQ7kNvwFae5nR&_nc_oc=Adq2Oeawfrcbj9OLuxgc_TtKBKurx0awgk9ZQHIZSSyTxAI9mD12oJtshlhwK-kHdhfc7R8NALQUVyv1siyoXR9i&_nc_zt=23&_nc_ht=scontent.fmux1-1.fna&_nc_gid=HdxzjQhULnepIRKvs27Fsg&_nc_ss=7b2a8&oh=00_AQGcd4-u5n0CTKlDtlPzqxv3GslfO8BrlNPHmeF6vyg7bw&oe=6A78B3C4', rating:4.9, reviews:214, demand:'🔥 High Demand • 18 viewing', sold:542, desc:'Masterfully crafted travel duffle bag made from 100% full-grain Multan cowhide with reinforced solid brass hardware.'},
+  {id:2, name:'TAN TACTICAL BACKPACK', price:5500, img:'https://scontent.flyp6-2.fna.fbcdn.net/v/t39.30808-6/764987459_122103011763420835_2498931830809487999_n.jpg?stp=dst-jpg_tt6&cstp=mx1024x1024&ctp=s1024x1024&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeH7S0Jh0Bx0ofGgdc6bdWemz_71AHLJ-EHP_vUAcsn4QckHurbuhlPU9O43buOkMqK1s_7nI0JKbqRO7viO6bbn&_nc_ohc=RjS447g2ON0Q7kNvwH1pAm2&_nc_oc=AdrdeO2k6JDsjdpILXwyVmPda9LOKsCabTEiHYIW3hxCuCStV7krPt55b_0WQ8d1UXU&_nc_zt=23&_nc_ht=scontent.flyp6-2.fna&_nc_gid=tsLhms-GuC5YPl88CX90Qw&_nc_ss=7b2a8&oh=00_AQGVu_dBxSoBayQRD8zOoUZ3x6xpLsjwBcohpCzXuzrFHQ&oe=6A78E9EB', rating:4.8, reviews:178, demand:'⚡ Selling Fast • 12 left', sold:389, desc:'Spacious daily essential tote featuring hand-stitched shoulder straps and velvet-lined organizer.'},
+  {id:3, name:'LEATHER BACKPACK', price:2999, img:'https://scontent.fmux1-1.fna.fbcdn.net/v/t39.30808-6/763239933_122102887791420835_1224661120677842485_n.jpg?stp=dst-jpg_tt6&cstp=mx509x337&ctp=s509x337&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=V6PQImZHk8IQ7kNvwEbF-1E&_nc_oc=AdqVA882qLRhHjUa9jRvdBCeyAvTmeklf_2iBOtXWaSbSXEQZvZIxFLkh-8UHrBcJQq3_MrbBHPQOM3vABRtbFJf&_nc_zt=23&_nc_ht=scontent.fmux1-1.fna&_nc_gid=OYbSo-O0ST5L7EnRxmhoYA&_nc_ss=7b2a8&oh=00_AQGjqGqJ9fxUOcqJiMehRWJloO_Gbm9ZJv39DOASj7Z2GA&oe=6A7893B0', rating:4.9, reviews:142, demand:'🔥 Trending Item', sold:460, desc:'Versatile cross-body courier bag designed with padded laptop protection and saddle stitching.'},
+  {id:4, name:'LEATHER BACKPACK', price:2999, img:'https://scontent.fmux1-1.fna.fbcdn.net/v/t39.30808-6/763861526_122102891763420835_2935242721216005855_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x1024&ctp=s1536x1024&_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=bhRO7D9NSRkQ7kNvwGMHKq8&_nc_oc=Adq9sr67zAI-J5nluiQzJOq0mo5ylC3orJyGORrEzmk7Vtmf3wbkjz5WKKK3wDBR-LbOIrWQ8XKzp9tDmV6Y0MTI&_nc_zt=23&_nc_ht=scontent.fmux1-1.fna&_nc_gid=jjy2sSnV-ggqS28nM1FPSQ&_nc_ss=7b2a8&oh=00_AQEd4LtT9Ab1FbOU2FvZyw6aZ5LYQIxhCFBEEnzfUqG70g&oe=6A7890AB', rating:5.0, reviews:310, demand:'⭐ Top Rated • Popular', sold:720, desc:'Professional executive briefcase with dedicated 15-inch laptop pocket and document dividers.'},
+  {id:5, name:'LEATHER BACKPACK', price:2999, img:'https://scontent.fmux1-1.fna.fbcdn.net/v/t39.30808-6/763805645_122102888121420835_1993322023358723385_n.jpg?stp=dst-jpg_tt6&cstp=mx497x338&ctp=s497x338&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=swuv_JeL090Q7kNvwGVsWLw&_nc_oc=AdqPFek19R9SLVlTdoNMebKLLEUjq-t5fCXt01i9stTyjeNx2NLZ7XtD3xy7qpw5RilKhxAhw3YLEdEOZIFccyvt&_nc_zt=23&_nc_ht=scontent.fmux1-1.fna&_nc_gid=Ko6iNXkGEFaJrnj1sWciEA&_nc_ss=7b2a8&oh=00_AQHkHhJYp8JH9k8wVLDqbkDP5oSoMvWYOuy39BRp3aaxoQ&oe=6A789771', rating:4.9, reviews:98, demand:'🔥 High Demand • Limited Batch', sold:280, desc:'Luxury overnight duffle built to handle lifetime journeys with heavy-duty YKK zippers.'},
+  {id:6, name:'NAVY BLUE CANVAS RUCKSAK', price:3500, img:'https://scontent.flyp6-2.fna.fbcdn.net/v/t39.30808-6/763805637_122103011709420835_6032454269786282923_n.jpg?stp=dst-jpg_tt6&cstp=mx1024x1024&ctp=s1024x1024&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFLxZI7J334KTs9KPQ1Bip4CJNdfJ4s7m4Ik118nizubnMCYLr1c7J_Xm1L2vMwxSkB7_d6wfdAQ8KHRpPa8uF3&_nc_ohc=ZXjNlRkotTAQ7kNvwHlhWj9&_nc_oc=AdrrQFEOKrVBiz2BSBzZPAw_NYp-g3BncLJdCSMgucrVz2GUNabP1bu0YVp409kZ-UE&_nc_zt=23&_nc_ht=scontent.flyp6-2.fna&_nc_gid=H-Fu9QrLcWef7Q4ZsunX6A&_nc_ss=7b2a8&oh=00_AQFN5PwiY7bIS2qt2V9U3JV7Ec-q97AY7SXtpBGgv7ORyQ&oe=6A78E548', rating:4.7, reviews:86, demand:'⚡ High Demand • 9 viewing', sold:315, desc:'Classic vintage flap satchel featuring adjustable leather strap and authentic patina leather.'},
+  {id:7, name:'LEATHER BACKPACK (BLACK)', price:2999, img:'https://scontent.fmux1-1.fna.fbcdn.net/v/t39.30808-6/764907060_122102885031420835_5227720255340538429_n.jpg?stp=dst-jpg_tt6&cstp=mx333x272&ctp=s333x272&_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=6jtQJYLI15MQ7kNvwGyFAX1&_nc_oc=Adr5qwExGZUZ4Xcsc0Aw0uh_wet8h3oGMNN8VkohOfGeOVpU9b76kFtNzfIBtC0hVqm9kM_AtzTTSW7wERgDC3ME&_nc_zt=23&_nc_ht=scontent.fmux1-1.fna&_nc_gid=JxLIKi2kFRXuwi4ruvmoSw&_nc_ss=7b2a8&oh=00_AQFdBjvqFYZACPQeDA0gU-6IWnq6_1PUIvE0iZFULuuY1A&oe=6A78953F', rating:4.8, reviews:165, demand:'🔥 Trending • 15 sold today', sold:510, desc:'Structure-fit leather briefcase crafted for modern professionals with double stitching.'},
+  {id:8, name:'Leather Backpack', price:2999, img:'https://scontent.fmux1-1.fna.fbcdn.net/v/t39.30808-6/763239925_122102886525420835_6529530025459820156_n.jpg?stp=dst-jpg_tt6&cstp=mx701x1121&ctp=s701x1121&_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=nGPdHDgOzcoQ7kNvwEKDXYe&_nc_oc=Adq7_Z06ElT1BP0datAnUTfhvH6P-0fGNDronWQhntsVnlReZ_zovIrqQ-_Umpe03vIilZm0tB3XT3yYDO-fHHYx&_nc_zt=23&_nc_ht=scontent.fmux1-1.fna&_nc_gid=7EJt-8zRLYeNd2KMcqSEqw&_nc_ss=7b2a8&oh=00_AQHPx7Cij7c-onfTrOvI4V1UwV5puAaFxLY6aTcN5F9Ftg&oe=6A789080', rating:4.9, reviews:240, demand:'⭐ Best Seller • High Demand', sold:630, desc:'Ergonomic full-grain leather backpack with breathable back padding and dual side bottle sleeves.'},
+  {id:9, name:'TAN JUTE BACKPACK', price:3250, img:'https://scontent.flyp6-1.fna.fbcdn.net/v/t39.30808-6/765855283_122103011853420835_6309415786089377678_n.jpg?stp=dst-jpg_tt6&cstp=mx1024x1024&ctp=s1024x1024&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeH8MeRC3gAgpYvdmR_YVqgOTg5dOekc0WFODl056RzRYfcV9_UHoXleqwCUZH10qfMx3d1Qr_DQ2b7XVx7-Ui96&_nc_ohc=B0YuoGPhkSUQ7kNvwHJ7BSQ&_nc_oc=AdoYckGEvSccsUPAIQKabgF9r9V4h500a4gxY97LIbpBMyLPx0rMhVCIKbxM-cIsRrE&_nc_zt=23&_nc_ht=scontent.flyp6-1.fna&_nc_gid=BGveeKeKjUINLteHNIsQOA&_nc_ss=7b2a8&oh=00_AQEqizdSXfSUB2gyMHQlqegOYVtUuPktCpgCIC8qB1Yymg&oe=6A78CB5C', rating:4.8, reviews:120, demand:'🔥 High Demand • Fast Shipping', sold:410, desc:'Lightweight minimalist shoulder pouch for phone, cards, and daily essentials.'},
+  {id:10, name:'BLACK LEATHER BACKPACK', price:2999, img:'https://scontent.fmux1-1.fna.fbcdn.net/v/t39.30808-6/765898257_122102883843420835_8760421705722333523_n.jpg?stp=dst-jpg_tt6&cstp=mx342x272&ctp=s342x272&_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=j6lQzpdGMtEQ7kNvwHOSog7&_nc_oc=AdrQFDTP6EXGf4U3TTJDUIxufh3qB6Z0XSuUZtyk1d7nk_DuhsnLJ1riPCG8ycYjW6QgmUaIFJyNL_I0q7TLFCs_&_nc_zt=23&_nc_ht=scontent.fmux1-1.fna&_nc_gid=PMxXMbikzDScAZ_pk3UFJQ&_nc_ss=7b2a8&oh=00_AQF1M41yidaXTGeV6BZpDeU729ADL3AsQkppzTKvIRpBcw&oe=6A7895B6', rating:4.9, reviews:175, demand:'⚡ High Demand • Artisan Pick', sold:395, desc:'Heavy-duty utility bag engineered for tough daily wear with oil-waxed leather.'},
+  {id:11, name:'LEATHER (TEXTURED)', price:2999, img:'https://scontent.fmux1-1.fna.fbcdn.net/v/t39.30808-6/763847553_122102884557420835_5146015037335552658_n.jpg?stp=dst-jpg_tt6&cstp=mx340x261&ctp=s340x261&_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=UBVabpl5n7wQ7kNvwGwSL9g&_nc_oc=AdqG7hBQpwHeR_CvnNmUKrl32IMr3hTA7zHt_BEtHiBhdbZfTLHXYpjz6kLjG34CAENIb1EpHXl_GgbSSfKjV0gq&_nc_zt=23&_nc_ht=scontent.fmux1-1.fna&_nc_gid=Ent4eHAerY3IQSRGdN5eBA&_nc_ss=7b2a8&oh=00_AQE6hB0qhqIEoiF38mTRuhZhedxeUIDGJX-ZZ-DkQRsxcw&oe=6A78BFC0', rating:4.7, reviews:95, demand:'🔥 High Demand • Modern Cut', sold:290, desc:'Ultra-slim leather folio bag designed for iPad, tablet, and ultrabooks.'},
+  {id:12, name:'CLASSIC LEATHER BACKPACK DUO', price:2999, img:'https://scontent.fmux1-1.fna.fbcdn.net/v/t39.30808-6/763177239_122102881473420835_4809657009089998491_n.jpg?stp=dst-jpg_tt6&cstp=mx347x276&ctp=s347x276&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=sy6LVCaIwxkQ7kNvwErYdpf&_nc_oc=AdrUGwzxuSt_NE2J-NTngfK7NItqLD_aymGywGEZwYFQbRQzJg0zPmBTvV4_LWKo6O4Z3MDfCOJ9o9qnqscPfMU4&_nc_zt=23&_nc_ht=scontent.fmux1-1.fna&_nc_gid=eofUGlP9xfbOGg8BhDLB-g&_nc_ss=7b2a8&oh=00_AQFoU-tqnR2TqSBMB_pur9MFaSfHAFyMiz-n2kpfB8Y-Ig&oe=6A78A4C2', rating:4.8, reviews:130, demand:'⚡ High Demand • Favorite', sold:340, desc:'Extra-large hand-crafted tote bag with solid bottom studs and zippered pocket.'}
+,
+{id:13, name:'BOHO TRIBAL BACKPACK', price:4500, img:'https://scontent.flyp6-2.fna.fbcdn.net/v/t39.30808-6/764987452_122103012045420835_3730555493289054074_n.jpg?stp=dst-jpg_tt6&cstp=mx1024x1024&ctp=s1024x1024&_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeG1KRgCwOiThVF1ESrsqUog--JR-V_6cXH74lH5X_pxcWFxrVur0HwaVIsPQSIIEsHn6WyGPMI_o27660ZQMM-U&_nc_ohc=cH2A63ujjsAQ7kNvwH9D595&_nc_oc=AdqRmwqjFuWafwrTYqv6x28dryCS49dlpqtF5uyNfdyofp44XHCKyDx-gINYFO61COQ&_nc_zt=23&_nc_ht=scontent.flyp6-2.fna&_nc_gid=Cp4aigt7RPGu0_qN1XXqkg&_nc_ss=7b2a8&oh=00_AQGnyuXNvoEKPH2AHK9xsqA_bYOQibk1gx60-u8uKayiCA&oe=6A78C7C7', rating:4.8, reviews:118, demand:'🔥 Popular Choice', sold:355, desc:'Elegant office leather bag with spacious compartments and premium craftsmanship.'},
+
+{id:14, name:'TAN CORK BACKPACK', price:3350, img:'https://scontent.flyp6-2.fna.fbcdn.net/v/t39.30808-6/765929621_122103011913420835_3026160097744469134_n.jpg?stp=dst-jpg_tt6&cstp=mx1024x1024&ctp=s1024x1024&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGlvUIf6r1hNKvYtCXRy627Qh02ezk53rJCHTZ7OTness34Fq2AhEMkOV9fdZw1ecTC-q4zQkd87IxRRdlOeat7&_nc_ohc=RDwkGwELX5oQ7kNvwHSYy1X&_nc_oc=AdraRAeTI-y-7if5jMLMHx0VcBW18hREpprfjf3GFPHVAE_wn-M2jh6o_qn95X2h5Ec&_nc_zt=23&_nc_ht=scontent.flyp6-2.fna&_nc_gid=vK_gwkCew1xu-V1FLCQCtw&_nc_ss=7b2a8&oh=00_AQFwURA7dn32EItlF25OgMsHhks7vSzQrn8vHdYSOL4Ifw&oe=6A78D257', rating:4.9, reviews:204, demand:'⚡ Limited Stock', sold:612, desc:'Premium leather travel duffel designed for business and weekend trips.'},
+
+{id:15, name:'NAVY BLUE CANVAS RUCKSAK', price:3500, img:'https://scontent.flyp6-2.fna.fbcdn.net/v/t39.30808-6/763805637_122103011709420835_6032454269786282923_n.jpg?stp=dst-jpg_tt6&cstp=mx1024x1024&ctp=s1024x1024&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFLxZI7J334KTs9KPQ1Bip4CJNdfJ4s7m4Ik118nizubnMCYLr1c7J_Xm1L2vMwxSkB7_d6wfdAQ8KHRpPa8uF3&_nc_ohc=ZXjNlRkotTAQ7kNvwHlhWj9&_nc_oc=AdrrQFEOKrVBiz2BSBzZPAw_NYp-g3BncLJdCSMgucrVz2GUNabP1bu0YVp409kZ-UE&_nc_zt=23&_nc_ht=scontent.flyp6-2.fna&_nc_gid=ouWZgSgogJYNB_xc7s9t0Q&_nc_ss=7b2a8&oh=00_AQHp5Yr1xem79-T5E34CGpmjKrZ7yNAyUtp5zo8Pb667dg&oe=6A78E548', rating:4.7, reviews:96, demand:'🔥 High Demand', sold:287, desc:'Timeless shoulder bag handcrafted from genuine full-grain leather.'},
+
+{id:16, name:'JUTE', price:3250, img:'https://scontent.flyp6-1.fna.fbcdn.net/v/t39.30808-6/765855283_122103011853420835_6309415786089377678_n.jpg?stp=dst-jpg_tt6&cstp=mx1024x1024&ctp=s1024x1024&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeH8MeRC3gAgpYvdmR_YVqgOTg5dOekc0WFODl056RzRYfcV9_UHoXleqwCUZH10qfMx3d1Qr_DQ2b7XVx7-Ui96&_nc_ohc=B0YuoGPhkSUQ7kNvwHJ7BSQ&_nc_oc=AdoYckGEvSccsUPAIQKabgF9r9V4h500a4gxY97LIbpBMyLPx0rMhVCIKbxM-cIsRrE&_nc_zt=23&_nc_ht=scontent.flyp6-1.fna&_nc_gid=GfXo1DyNj-opPlg50spq7g&_nc_ss=7b2a8&oh=00_AQErU7NNnpbeDrFmnl5qFplCGnzASAWwWwapZ3_WYGuYyA&oe=6A78CB5C', rating:4.8, reviews:151, demand:'⭐ Best Seller', sold:420, desc:'Minimal leather laptop sleeve with soft interior lining for protection.'},
+
+{id:17, name:'BLACK LEATHER BAG', price:2999, img:'https://scontent.fmux1-1.fna.fbcdn.net/v/t39.30808-6/763861512_122102888757420835_4662829809362533792_n.jpg?stp=dst-jpg_tt6&cstp=mx718x1084&ctp=s718x1084&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=vYF8OP45cpMQ7kNvwFzTQSK&_nc_oc=AdrW6PMl1vy9JqKJp61QqebOXNtIA2EWT2_txAOgIzvDalNJi8K38Maxanvoc0wm-Dd7KkiNn97Wc15lLEm9z5AE&_nc_zt=23&_nc_ht=scontent.fmux1-1.fna&_nc_gid=T2wGHxwjHqUmCEwXTA9sYA&_nc_ss=7b2a8&oh=00_AQEPg-XLYLWDVT691l9gNdfjjC9dkn19JttsUgKBaf4Vow&oe=6A78AC39', rating:4.9, reviews:173, demand:'🔥 Trending', sold:485, desc:'Professional messenger bag featuring adjustable shoulder strap and brass hardware.'},
+
+{id:18, name:'MINIMALIST CITY SLING (BLACK)', price:2750, img:'https://scontent.flyp6-1.fna.fbcdn.net/v/t39.30808-6/764845102_122103011607420835_2841875554055718178_n.jpg?stp=dst-jpg_tt6&cstp=mx483x265&ctp=s483x265&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeH_ngFxlmaGbSzYb1bLvakjkQBna7hVcFuRAGdruFVwW5HhwQTqE-4iDax4yQ8yRQZdVExtoXeFtZNaeddMgQdj&_nc_ohc=xwuubNtpNogQ7kNvwG3JALR&_nc_oc=AdqHGnzMKMRqO4-kyTUAarZYaDEO40vOMUY2Fe4s8MIHoRML1UznsLV6gB_GZm4_NrY&_nc_zt=23&_nc_ht=scontent.flyp6-1.fna&_nc_gid=Q9zs9TFudpcR2y0Zc94oPQ&_nc_ss=7b2a8&oh=00_AQFURimi2gxcV5WkhvmmWGeHp2zpIpNWy7NVEZKlzHsa9g&oe=6A78E0A3', rating:4.8, reviews:132, demand:'⚡ Selling Fast', sold:378, desc:'Stylish leather gym bag with ventilated compartments and reinforced handles.'},
+
+{id:19, name:'CLASSIC LEATHER ELT BAG (COGNAC)', price:2800, img:'https://scontent.flyp6-2.fna.fbcdn.net/v/t39.30808-6/763992757_122103011541420835_2086753876484252972_n.jpg?stp=dst-jpg_tt6&cstp=mx508x275&ctp=s508x275&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHUEjJWFbx356Dl7Pdd_gE3NLE3kwqeksw0sTeTCp6SzDjATH_24VFd5gCFtZyZEw4_WlDA24g0Dx4FJSxfV2q7&_nc_ohc=miDQokfFiswQ7kNvwFvYOaI&_nc_oc=AdqfJ8moUljkM1m-GIsJ9OaQfyuiC0nKORO_RWDet8KM7Kkvxx6-TbTtuV_3AL2hLQU&_nc_zt=23&_nc_ht=scontent.flyp6-2.fna&_nc_gid=xosgPvAC1XZs3ZiAQdzbQg&_nc_ss=7b2a8&oh=00_AQFPtyytgOwOHvQ0_cgSTo7OulhhhRMg2MOe1tee8GnyTw&oe=6A78E299', rating:4.9, reviews:187, demand:'🔥 Premium Pick', sold:530, desc:'Compact leather briefcase suitable for daily office essentials.'},
+
+{id:20, name:'RUGGED OUTDOOR PACK (CANVAS)', price:2999, img:'https://scontent.flyp6-1.fna.fbcdn.net/v/t39.30808-6/764907050_122103011487420835_1859567041149849637_n.jpg?stp=dst-jpg_tt6&cstp=mx513x383&ctp=s513x383&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHe_ysd0pWjrRYZYMIqmc2utAvC4-HlbKa0C8Lj4eVspjVPsWiGSPoJAmpF-D9zB5ENA4JUVhendHZ-RfwXqGaw&_nc_ohc=ikj2b3jhDKMQ7kNvwEZKlJ4&_nc_oc=AdpOVlEQD2mKwN7UiQdkWzBQdmygwq-hlnK7POWyj3eTpr6J37E_hB15puJYMGnm_28&_nc_zt=23&_nc_ht=scontent.flyp6-1.fna&_nc_gid=_hwnhscQ_uFsWDI4yixK2A&_nc_ss=7b2a8&oh=00_AQHwzEnO0qFnxoHvzuZx8w1TuWBS7Vy5wNYdTf6uTl8QFw&oe=6A78DD99', rating:4.7, reviews:109, demand:'⭐ Customer Favorite', sold:295, desc:'Vintage-inspired satchel made with distressed genuine leather.'},
+
+{id:21, name:'CRAFTED EXPLORER WAIST PACK (PEBBLED LEATHER)', price:2999, img:'https://scontent.flyp6-2.fna.fbcdn.net/v/t39.30808-6/765970390_122103011403420835_2800922770741244106_n.jpg?stp=dst-jpg_tt6&cstp=mx506x356&ctp=s506x356&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGq8eCsI_LRmHQCa6R0rjI9XiLE8pZe78leIsTyll7vyRRW8hKD52wpzYCyr9Z3vPgc6i12fDRQfEVwLs62sn8x&_nc_ohc=Pz7rplg3S8oQ7kNvwE_-oCx&_nc_oc=AdrbcliuKmOhdLJkV3jbuwI9BVf4o-VRfGIAU5s5QofqnxK9lvSkk1KUlREjSOqrzhM&_nc_zt=23&_nc_ht=scontent.flyp6-2.fna&_nc_gid=zb0iUcYBcSdflZ7JsApN-A&_nc_ss=7b2a8&oh=00_AQH7XeNSg2Y53c8PRNqpJW4SfLMnFECmvqGE0ZAUwRGZTw&oe=6A78DEC7', rating:4.9, reviews:221, demand:'🔥 High Demand', sold:640, desc:'Adventure-ready leather backpack with multiple storage pockets.'},
+
+{id:22, name:'VINTAGE LEATHER SLEEVES (DISTRESSED TAN)', price:3300, img:'https://scontent.flyp6-1.fna.fbcdn.net/v/t39.30808-6/764833166_122103011361420835_747772656941724176_n.jpg?stp=dst-jpg_tt6&cstp=mx513x319&ctp=s513x319&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEnz5cr_NOlfeKgmY_d3bqWKPeY00iaDaUo95jTSJoNpVWBqQKGX_22AMR4AYhYaDhwsIMbXWt2Jk9IhSFqA9-o&_nc_ohc=35rHa2tdzJMQ7kNvwF2Qro9&_nc_oc=AdqtSR7qE52FVqgACTZqXNn4RnUAdY69R3xjTx1QVIyozjgiNBNuuzA46cj3crajOmM&_nc_zt=23&_nc_ht=scontent.flyp6-1.fna&_nc_gid=hTkLoWLge3zaGed7ROed6w&_nc_ss=7b2a8&oh=00_AQFZqxSxIAd9gRHGx0VzbBSFK-JzKsxIJl78WdFaD11UEQ&oe=6A78E60C', rating:4.8, reviews:148, demand:'⚡ Fast Moving', sold:396, desc:'Elegant carry bag designed for business professionals and executives.'},
+
+{id:23, name:'CANVAS & LEATHER SLEEVE (NAVY / BROWN)', price:3450, img:'https://scontent.flyp6-2.fna.fbcdn.net/v/t39.30808-6/764976116_122103011283420835_1272579319567391423_n.jpg?stp=dst-jpg_tt6&cstp=mx498x308&ctp=s498x308&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEjNj_3--BSDeuyvEGHRHK7zL0LMBDmZE3MvQswEOZkTQeRUO6VrNruRt_G-wnJ378sAJoYeTFGDpWwam8iy9Kp&_nc_ohc=xZMnutpjb_cQ7kNvwEz6Z5m&_nc_oc=AdpcX65QzDs7HWHMKJgTvI8IdZBA1qbsNlhwSVTqNCNKLLv3oGbieMqJUpjdGTgPpPY&_nc_zt=23&_nc_ht=scontent.flyp6-2.fna&_nc_gid=8sLvsodI-teyY4DFQ1FxtQ&_nc_ss=7b2a8&oh=00_AQFCcH2JdcYHa6JAS6971lYJfeP4iqs3_oJXJeuzpbO3BA&oe=6A78DDA3', rating:4.9, reviews:202, demand:'🔥 Limited Edition', sold:555, desc:'Perfect cabin-size leather bag for frequent travelers.'},
+
+{id:24, name:'MODERN TEC SLEEV (CHARCOL GRY)', price:3350, img:'https://scontent.flyp6-2.fna.fbcdn.net/v/t39.30808-6/763018727_122103011193420835_6693713996567496759_n.jpg?stp=dst-jpg_tt6&cstp=mx508x326&ctp=s508x326&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFwoXqPIrWrEmzchCWCzh9L47Js2leqkR3jsmzaV6qRHT9Ebr5m_X325tlL57H3-YSKGF4-a0AhNriJR5H-yZQW&_nc_ohc=Q6EPtZBuA7YQ7kNvwEcKo7a&_nc_oc=AdpIar-VCtzc1IseYfAj9iGr0XKEOkngC22phyCheonfyKxGYtFMMETeOlKu7-lkCgQ&_nc_zt=23&_nc_ht=scontent.flyp6-2.fna&_nc_gid=XA0UWYiqDGhkzErjG3AF7Q&_nc_ss=7b2a8&oh=00_AQGuz1ns7DQe_7qzDbmNP3enYDAI8ftut5BVxH043Km9Cw&oe=6A78EB80', rating:4.8, reviews:117, demand:'⭐ Trending Now', sold:331, desc:'Compact sling bag crafted with premium genuine leather.'},
+
+{id:25, name:'EXECUTIVE BRIEFCASE (DARK MAHOGANY)', price:4500, img:'https://scontent.flyp6-1.fna.fbcdn.net/v/t39.30808-6/764907066_122103011127420835_4564969837845878415_n.jpg?stp=dst-jpg_tt6&cstp=mx508x320&ctp=s508x320&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEW5s70w5KaYrWHCG9nTS-pb2rjxsnK14lvauPGycrXib1joB7SvWuv8lSiEaWVAORHYgQ5kVAq-be38RU2dzhB&_nc_ohc=xJa3PXCAtGwQ7kNvwHOYT6w&_nc_oc=Ado5Z94XRYAiEDVZw9WqgsUSlFPPmCC-Kq_PeKkP81Ds6YwExiwXceTK098pBtQaoyM&_nc_zt=23&_nc_ht=scontent.flyp6-1.fna&_nc_gid=VX6TJjU5hFwdq21SvgNBgg&_nc_ss=7b2a8&oh=00_AQHJvpxCyEx7YGce6l977wntVFmBlEaocrzjnhZjnI-w_w&oe=6A78F1A5', rating:4.7, reviews:102, demand:'🔥 Daily Favorite', sold:310, desc:'Spacious tote ideal for shopping, work, and everyday use.'},
+
+{id:26, name:'MODERN CITY BRIEFCASE (COGNACLEATHER)', price:4699, img:'https://scontent.flyp6-1.fna.fbcdn.net/v/t39.30808-6/764036695_122103011061420835_738189944859257140_n.jpg?stp=dst-jpg_tt6&cstp=mx509x326&ctp=s509x326&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeG5PJOYv98y6J_Mq6VqGVYncoZnViEgO4NyhmdWISA7g4GWfhJc3xuIFlUt8ra-pqlOTlKZ793ju428fv2xzkDO&_nc_ohc=VCJuPaMkmREQ7kNvwHNWq-m&_nc_oc=AdqX_tsrbGA9XVbFtD4tMN-E-puBl3tb1U0zjiCuacIwIYwQ4eX1T1FTY8MY2oYUkCk&_nc_zt=23&_nc_ht=scontent.flyp6-1.fna&_nc_gid=7H5kQnT0UVAW0NtegXjawA&_nc_ss=7b2a8&oh=00_AQE0Jtg7LxXBH9Ql3k5tkhjVdxpVAZSQqKs95SdAK9RM2g&oe=6A78EF6A', rating:4.9, reviews:192, demand:'⚡ Best Choice', sold:575, desc:'Premium leather laptop brief with dedicated accessories pockets.'},
+
+{id:27, name:'HERITAGE BUCKLE BRIEFCASE(DISTRESSED TAN)', price:4999, img:'https://scontent.flyp6-2.fna.fbcdn.net/v/t39.30808-6/766914648_122103011007420835_1799840791982524382_n.jpg?stp=dst-jpg_tt6&cstp=mx507x329&ctp=s507x329&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeExD_tRzKDclbITPbpuuPh6Stzcwi3Vox9K3NzCLdWjHyYTXAZvCyFR1FPVI1rZusnuxfHYTts3INUT6nflKxQk&_nc_ohc=aUPu-pB7X0EQ7kNvwFFqhyg&_nc_oc=Adr8YYrbXfIdklMb8BEF3Nc4B_HbGnihecbe66e7IcEJz0W4Mpr1oHK-lIZzcA73QH8&_nc_zt=23&_nc_ht=scontent.flyp6-2.fna&_nc_gid=EmLL-0hluS6ZkJ8Y_pGy0Q&_nc_ss=7b2a8&oh=00_AQERhdDTDKldDKmax9_x5eko1UYWPXWxJHgbTMF3x5AXFA&oe=6A78E7D8', rating:4.8, reviews:121, demand:'🔥 Top Rated', sold:348, desc:'Stylish crossbody bag combining traditional craftsmanship with modern design.'},
+
+{id:28, name:'TRAVEL & CABIN BRIEFCASE(CHOCLATE LEATHER)', price:5999, img:'https://scontent.flyp6-2.fna.fbcdn.net/v/t39.30808-6/763193956_122103010941420835_7023916206441696903_n.jpg?stp=dst-jpg_tt6&cstp=mx508x334&ctp=s508x334&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFBDCAQui-ShuL9FPff0uCbOKExFITKwB44oTEUhMrAHgKsPQ7ezfEz9nAUeNgFSApiBI0-Gljaqh09zBOPILE2&_nc_ohc=7cgPVGf7wrEQ7kNvwFsdh26&_nc_oc=AdpZH4e3DQoBOZkqAdiWq978A8XdVzMSTDX7ynU1Rl2t49f1ECGvcq-lKgM4FtK-Suw&_nc_zt=23&_nc_ht=scontent.flyp6-2.fna&_nc_gid=DAYeXLLsj74Sz4FelfMCZg&_nc_ss=7b2a8&oh=00_AQGQetD5y12xPRCAlKI2rma_sWCSDW5Hwknaa7gM4iW-Yg&oe=6A78E323', rating:4.9, reviews:236, demand:'⭐ High Demand', sold:668, desc:'Large-capacity leather travel bag for weekend getaways.'},
+
+{id:29, name:'OLIVE GREEN BUCKET BAG', price:3650, img:'https://scontent.flyp6-2.fna.fbcdn.net/v/t39.30808-6/767032091_122103010875420835_7489280462750197069_n.jpg?stp=dst-jpg_tt6&cstp=mx507x331&ctp=s507x331&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHoMkoHHs0TQoZtTXkfAz854W6F1PDnuK7hboXU8Oe4rpCV55mc3VIacwMUSXxC_ytXzs9tB3yajC_JZQFcJ6V8&_nc_ohc=hO3wfzLyiTcQ7kNvwGDm0HX&_nc_oc=AdqFDt_pl1S9DpAlXDmIoFWKHdclPcxGqd-kTecf5zCUFG_UPYfoPM7-hZ2B6fZrBOg&_nc_zt=23&_nc_ht=scontent.flyp6-2.fna&_nc_gid=esBs9wDSkrPO0HvB4NkGNQ&_nc_ss=7b2a8&oh=00_AQG4I5M6PIX3KyBpuN2zAAuXurbaSBu47t_kM4dCemFqfA&oe=6A78DCE0', rating:4.8, reviews:146, demand:'🔥 Hot Item', sold:402, desc:'Urban-inspired leather backpack with secure zip compartments.'},
+
+{id:30, name:'DEEP TAN BUCKET BAG', price:3999, img:'https://scontent.flyp6-1.fna.fbcdn.net/v/t39.30808-6/764807237_122103010809420835_4888521427092906445_n.jpg?stp=dst-jpg_tt6&cstp=mx494x319&ctp=s494x319&_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFyZtje0u70T3KNXHhnRldrTGtdbiBy-lVMa11uIHL6VaEkpPtcPa8ebvnBiG0BHAcxNmTK1Egw75Och9QTN2px&_nc_ohc=kKuTDBo_UwcQ7kNvwEdcfPQ&_nc_oc=AdqbSzQqLtaekx4noufn9NkG-9BbcVdJkktFzZVsPgx_3Vr18hTyXfoS6gDvtOIzNE0&_nc_zt=23&_nc_ht=scontent.flyp6-1.fna&_nc_gid=EjAcmh6mLODLeg7bs_N9wg&_nc_ss=7b2a8&oh=00_AQGWD-9D8b60VvHYxKwp0bBq0W9x5RGwLw6-C22pJ7YDMw&oe=6A78CE57', rating:4.7, reviews:111, demand:'⚡ New Arrival', sold:276, desc:'Minimalist leather tote offering elegance and everyday practicality.'},
+
+{id:31, name:'Black Pebbled Bag', price:3499, img:'https://scontent.flyp6-1.fna.fbcdn.net/v/t39.30808-6/764818129_122103010767420835_4580202799953873150_n.jpg?stp=dst-jpg_tt6&cstp=mx505x350&ctp=s505x350&_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGKjTWhKxwm3P7Mu8YUQfPwzoFUAQ04bSvOgVQBDThtK6rzpw3I9RjFN93z8Xi7hc9QhRzJdOJYtcWTVCYhnL1F&_nc_ohc=EUqqYi5Bsc0Q7kNvwEoRXx9&_nc_oc=AdqA7zi-Dv0JCk2EExMu53yZqb7gHDoiMxVDpuRkV75sIjk9UNWZ-lTb7nE_zipjWa0&_nc_zt=23&_nc_ht=scontent.flyp6-1.fna&_nc_gid=oj9kt5dAsWbtcoy4n2uo_w&_nc_ss=7b2a8&oh=00_AQELTAdkBjEf9RGDw7V-kc9gEFSrHG7w1N-CT0HY0yIp8Q&oe=6A78F67B', rating:5.0, reviews:289, demand:'🔥 Premium Collection', sold:710, desc:'Luxury executive briefcase handcrafted with premium leather and brass fittings.'},
+
+{id:32, name:'Burgendy Bucket Bag', price:3799, img:'https://scontent.flyp6-2.fna.fbcdn.net/v/t39.30808-6/763239938_122103010713420835_64064456603771660_n.jpg?stp=dst-jpg_tt6&cstp=mx487x336&ctp=s487x336&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeG1a_xWShpuE8iy8HJUV1d9mWNpPn4uOGeZY2k-fi44Zz2xV-4-RYNAsc_DAPqjBgki9lbTzZxd5SwDhbq1QErd&_nc_ohc=rNps7JNbS5cQ7kNvwHXU1fV&_nc_oc=AdqPiNOyakdHD2tVSyrdC8-2LxL4VaBK87hmd2Q774-wgu4IcoeoROdrEx1LOLPyXzY&_nc_zt=23&_nc_ht=scontent.flyp6-2.fna&_nc_gid=w_tPbWqETQXq_f7ourH4Yg&_nc_ss=7b2a8&oh=00_AQFzUuxOa5_Fcy0QmiYGgNnVAZ2qOayJJemmJhvUqVkcwA&oe=6A78CB19', rating:4.9, reviews:215, demand:'⭐ Best Seller', sold:605, desc:'Premium leather travel backpack designed for comfort, style, and durability.'}
+];
+
+const COLLECTION_DATA = {
+  watches: [
+    {id:101, name:'Classic Tan Watch', price:1100, img:'https://matrixtimepiece.in/cdn/shop/files/9-A_f9a0de9b-3759-4181-8685-e6206607bbed.jpg?v=1784532836&width=533', rating:4.9, reviews:154, demand:'🔥 High Demand', sold:480, desc:'Genuine Multan tan leather watch strap with polished stainless steel casing.'},
+    {id:102, name:'Midnight Black Strap', price:2890, img:'https://matrixtimepiece.in/cdn/shop/files/10-A_737bc66e-7ae6-41a6-a3c4-ac6d3ee345e4.jpg?v=1772168358&width=533', rating:4.8, reviews:112, demand:'⚡ Selling Fast', sold:320, desc:'Matte black leather strap timepiece with minimal dial design.'},
+    {id:103, name:'Vintage Brown Watch', price:1090, img:'https://matrixtimepiece.in/cdn/shop/files/13-A_f48c1d64-d12b-4c66-9293-cc8aac5cf6b3.jpg?v=1784374000&width=533', rating:4.9, reviews:98, demand:'🔥 High Demand', sold:295, desc:'Aged brown patina leather strap watch with antique brass bezel.'},
+    {id:104, name:'Slate Dark Watch', price:1500, img:'https://matrixtimepiece.in/cdn/shop/files/12-A_71fc0c5e-648c-4915-9cf1-500adcf34301.jpg?v=1784375073&width=533', rating:4.7, reviews:76, demand:'⚡ High Demand', sold:210, desc:'Minimalist dark slate timepiece with soft full-grain leather strap.'},
+    {id:105, name:'Chronograph Leather', price:2999, img:'https://matrixtimepiece.in/cdn/shop/files/17-A_05645942-df49-4ecf-b1d6-1d36b6268ced.jpg?v=1784543385&width=533', rating:5.0, reviews:210, demand:'🔥 Top Rated', sold:530, desc:'Luxury multi-dial chronograph watch paired with hand-stitched tan strap.'},
+    {id:106, name:'Gold Black Edition', price:2550, img:'https://matrixtimepiece.in/cdn/shop/files/15-A_ab458079-5053-47b3-a920-c9ad97b9b828.jpg?v=1772104491&width=533', rating:4.9, reviews:135, demand:'🔥 High Demand', sold:340, desc:'Premium gold accent watch case with black genuine hide strap.'},
+    {id:107, name:'Suede Strap Watch', price:2200, img:'https://matrixtimepiece.in/cdn/shop/files/23-A_2108edf2-04c1-4e5b-841d-59af3406f04c.jpg?v=1772099956&width=533', rating:4.6, reviews:64, demand:'⚡ Soft Touch', sold:190, desc:'Velvety suede finish leather strap crafted for casual comfort.'},
+    {id:108, name:'Field Watch Heritage', price:1050, img:'https://matrixtimepiece.in/cdn/shop/files/Untitled_design_f0ee3a9a-dafc-4427-a6e2-d793cbdc6c9d.jpg?v=1773489247&width=533', rating:4.8, reviews:105, demand:'🔥 Durable Build', sold:275, desc:'Rugged tactical field watch with thick saddle-stitched leather.'},
+    {id:109, name:'Artisan Blue Timepiece', price:2500, img:'https://matrixtimepiece.in/cdn/shop/files/DD-66.jpg?v=1756208326&width=533', rating:4.9, reviews:88, demand:'⭐ Unique Edition', sold:215, desc:'Deep navy blue dial paired with hand-dyed cognac leather strap.'}
+  ],
+  belts: [
+    {id:201, name:'Formal Dress Belt', price:3690, img:'https://mender.pk/wp-content/uploads/2026/05/IMG_3024-400x400.jpg', rating:4.9, reviews:230, demand:'🔥 Best Seller', sold:890, desc:'Sleek 35mm formal leather dress belt with silver solid brass buckle.'},
+    {id:202, name:'Casual Jeans Belt', price:3690, img:'https://mender.pk/wp-content/uploads/2026/05/IMG_3022-800x1200.jpg', rating:4.7, reviews:140, demand:'⚡ High Demand', sold:520, desc:'Heavy duty 40mm casual jeans belt made from single piece unlined leather.'},
+    {id:203, name:'Woven Braided Belt', price:3800, img:'https://mender.pk/wp-content/uploads/2026/05/IMG_3025-400x400.jpg', rating:4.8, reviews:92, demand:'🔥 High Demand', sold:310, desc:'Hand-woven leather pattern belt with vintage brass buckle.'},
+    {id:204, name:'Buffalo Heavy Belt', price:3400, img:'https://mender.pk/wp-content/uploads/2026/05/IMG_3031-400x400.jpg', rating:5.0, reviews:180, demand:'🔥 Ultra Tough', sold:450, desc:'Extremely solid full-grain buffalo hide belt built to endure lifetimes.'},
+    {id:205, name:'Mocha Brown Belt', price:2850, img:'https://mender.pk/wp-content/uploads/2024/09/Camel-Brown-Plain-Leather-Belt-1.5-Inches-Wide-768x768.jpg', rating:4.7, reviews:88, demand:'⚡ Warm Tones', sold:260, desc:'Warm mocha brown smooth leather belt suitable for both chinos and denim.'},
+    {id:206, name:'Tan Double Stitched', price:3400, img:'https://mender.pk/wp-content/uploads/2024/09/Men-and-Women-Exotic-Ostrich-Texture-Cow-Leather-Belt-1.5-Inches-Wide-768x768.jpg', rating:4.8, reviews:110, demand:'🔥 Double Stitched', sold:380, desc:'Classic tan belt featuring double contrast border stitching.'},
+    {id:207, name:'Reversible Executive', price:2850, img:'https://mender.pk/wp-content/uploads/2024/09/Men-and-Women-Mint-Green-Genuine-Leather-Belt-768x768.jpg', rating:4.9, reviews:195, demand:'⭐ 2-in-1 Design', sold:620, desc:'Rotational buckle allowing instant switch between Black and Brown sides.'},
+    {id:208, name:'Western Pattern Belt', price:2970, img:'https://mender.pk/wp-content/uploads/2024/09/Maroon-Premium-Cow-Leather-Belt-1.5-Inches-Wide-Unisex-768x768.jpg', rating:4.8, reviews:130, demand:'🔥 Engraved Hardware', sold:390, desc:'Authentic engraved antique silver buckle with floral embossed leather.'},
+    {id:209, name:'Braided Flex Belt', price:3450, img:'https://mender.pk/wp-content/uploads/2022/03/23-1-768x768.png', rating:4.7, reviews:75, demand:'⚡ Flexible Comfort', sold:230, desc:'Stretchable woven leather construction for ultimate waistline flexibility.'}
+  ],
+  wallets: [
+    {id:301, name:'Vertical Slim Wallet', price:1750, img:'https://mender.pk/wp-content/uploads/2025/06/Raw-Leather-Bi-Fold-Wallet-%E2%80%93-Crazy-Horse-Article-800x800.jpg', rating:4.9, reviews:310, demand:'🔥 Customer Favorite', sold:1120, desc:'Modern slim vertical cardholder wallet holding up to 8 cards.'},
+    {id:302, name:'Passport Travel Wallet', price:3350, img:'https://mender.pk/wp-content/uploads/2024/10/RFID-WALLET-800x800.jpg', rating:4.8, reviews:160, demand:'⚡ Travel Essential', sold:490, desc:'All-in-one travel wallet housing passport, boarding pass, and SIM cards.'},
+    {id:303, name:'Heritage Bifold Wallet', price:2600, img:'https://mender.pk/wp-content/uploads/2024/09/Simple-NoFlap-Wallet-in-Black-800x800.jpg', rating:4.9, reviews:420, demand:'🔥 #1 Choice', sold:1350, desc:'Traditional double cash compartment bifold with 6 card slots.'},
+    {id:304, name:'Front Pocket Sleeve', price:4000, img:'https://mender.pk/wp-content/uploads/2021/05/9-800x800.png', rating:4.7, reviews:190, demand:'⚡ Ultra Compact', sold:610, desc:'Ultra-thin front pocket sleeve with pull-tab quick access.'},
+    {id:305, name:'Hunter Green Wallet', price:49500, img:'https://mender.pk/wp-content/uploads/2021/04/IMG_2878-800x533.jpg', rating:4.9, reviews:145, demand:'🔥 Special Dye', sold:430, desc:'Unique hunter green vegetable-tanned leather bi-fold.'},
+    {id:306, name:'Zippered Leather Clutch', price:4950, img:'https://mender.pk/wp-content/uploads/2026/03/JJ-WALLET-IMGS-5-800x800.jpg', rating:4.8, reviews:115, demand:'⚡ Full Zip', sold:320, desc:'Spacious zippered organizer holding phone, cash, coin pouch, and 12 cards.'},
+    {id:307, name:'Carbon Hybrid Wallet', price:3350, img:'https://mender.pk/wp-content/uploads/2021/01/12-800x800.png', rating:4.7, reviews:88, demand:'🔥 Modern Hybrid', sold:280, desc:'Real carbon fiber accent plate merged with saddle-stitched leather.'},
+    {id:308, name:'Vintage Tri-fold', price:2950, img:'https://mender.pk/wp-content/uploads/2021/01/15-800x800.png', rating:4.8, reviews:130, demand:'⚡ Max Capacity', sold:410, desc:'Roomy 3-panel wallet with clear ID window and coin zipper.'},
+    {id:309, name:'Magnetic Money Clip', price:4450.00, img:'https://mender.pk/wp-content/uploads/2025/03/Long-Coat-Wallet-5-800x800.jpg', rating:4.9, reviews:210, demand:'🔥 Magnetic Grip', sold:740, desc:'Powerful neodymium magnetic clip securing cash alongside 4 card slots.'}
+  ]
+};
+
+let cart = [];
+let wishlist = [1, 4, 101];
+let currentModalProduct = null;
+let modalQty = 1;
+
+function renderProducts() {
+  document.getElementById('productsGrid').innerHTML = PRODUCTS.map(p => {
+    const isFav = wishlist.includes(p.id);
+    return `
+      <div class="card">
+        <button class="heart-btn ${isFav ? 'active' : ''}" onclick="toggleWishlist(${p.id})">
+          <svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+        </button>
+        <div class="card-img" onclick="showProductDetails(${p.id})"><img src="${p.img}" alt="${p.name}"></div>
+        <div style="display:flex; justify-content:center; gap:6px; margin-bottom:5px;">
+          <span class="rating-stars">★ ${p.rating}</span>
+          <span style="font-size:11px; color:#9ca3af;">(${p.reviews})</span>
+        </div>
+        <h3>${p.name}</h3>
+        <div style="margin:4px 0; display:flex; flex-direction:column; gap:3px; align-items:center;">
+          <span class="demand-badge">${p.demand}</span>
+          <span class="sold-badge">📦 ${p.sold}+ Sold</span>
+        </div>
+        <span class="price">Rs. ${p.price}</span>
+        <div style="display:grid; grid-template-columns: 1fr auto; gap:8px;">
+          <button class="btn-main" onclick="addToCartById(${p.id})">Add to Bag</button>
+          <button onclick="showProductDetails(${p.id})" style="background:#f3efea; color:var(--leather); border-radius:8px; padding:0 12px; font-weight:700;">Details</button>
+        </div>
+      </div>`;
+  }).join('');
+  updateWishlistUI();
+}
+
+function openCollection(cat) {
+  document.getElementById('collectionMain').style.display = 'none';
+  document.getElementById('collectionViewer').style.display = 'block';
+  document.getElementById('colTitle').textContent = cat.charAt(0).toUpperCase() + cat.slice(1) + ' Collection';
+  const items = COLLECTION_DATA[cat] || [];
+  document.getElementById('collectionGrid').innerHTML = items.map(p => {
+    const isFav = wishlist.includes(p.id);
+    return `
+      <div class="card">
+        <button class="heart-btn ${isFav ? 'active' : ''}" onclick="toggleWishlist(${p.id})">
+          <svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+        </button>
+        <div class="card-img" onclick="showProductDetails(${p.id})"><img src="${p.img}" alt="${p.name}"></div>
+        <div style="display:flex; justify-content:center; gap:6px; margin-bottom:5px;">
+          <span class="rating-stars">★ ${p.rating}</span>
+          <span style="font-size:11px; color:#9ca3af;">(${p.reviews})</span>
+        </div>
+        <h3>${p.name}</h3>
+        <div style="margin:4px 0; display:flex; flex-direction:column; gap:3px; align-items:center;">
+          <span class="demand-badge">${p.demand}</span>
+          <span class="sold-badge">📦 ${p.sold}+ Sold</span>
+        </div>
+        <span class="price">Rs. ${p.price}</span>
+        <div style="display:grid; grid-template-columns: 1fr auto; gap:8px;">
+          <button class="btn-main" onclick="addToCartById(${p.id})">Add to Bag</button>
+          <button onclick="showProductDetails(${p.id})" style="background:#f3efea; color:var(--leather); border-radius:8px; padding:0 12px; font-weight:700;">Details</button>
+        </div>
+      </div>`;
+  }).join('');
+  document.getElementById('collections').scrollIntoView({ behavior: 'smooth' });
+}
+
+function closeCollection() {
+  document.getElementById('collectionViewer').style.display = 'none';
+  document.getElementById('collectionMain').style.display = 'block';
+}
+
+function showProductDetails(id) {
+  const p = PRODUCTS.find(i => i.id === id) || Object.values(COLLECTION_DATA).flat().find(i => i.id === id);
+  if(!p) return;
+  currentModalProduct = p;
+  modalQty = 1;
+  document.getElementById('modalQty').textContent = modalQty;
+  document.getElementById('modalImg').src = p.img;
+  document.getElementById('modalTitle').textContent = p.name;
+  document.getElementById('modalPrice').textContent = `Rs. ${p.price}`;
+  document.getElementById('modalRating').textContent = p.rating;
+  document.getElementById('modalReviews').textContent = `(${p.reviews} verified reviews)`;
+  document.getElementById('modalDemand').textContent = p.demand;
+  document.getElementById('modalSold').textContent = `📦 ${p.sold}+ Sold`;
+  document.getElementById('modalDesc').textContent = p.desc;
+  document.getElementById('modalAddBtn').onclick = function() { addToCartById(p.id, modalQty); closeModal(); };
+  document.getElementById('productModalOverlay').classList.add('open');
+}
+
+function changeModalQty(delta) {
+  modalQty = Math.max(1, modalQty + delta);
+  document.getElementById('modalQty').textContent = modalQty;
+}
+
+function closeModal() { document.getElementById('productModalOverlay').classList.remove('open'); }
+
+function toggleWishlist(id) {
+  if(wishlist.includes(id)) {
+    wishlist = wishlist.filter(i => i !== id);
+    showToast('Removed from Favorites');
+  } else {
+    wishlist.push(id);
+    showToast('Added to Favorites ❤️');
+  }
+  renderProducts();
+}
+
+function updateWishlistUI() {
+  document.getElementById('wishlistCount').textContent = wishlist.length;
+  const allProds = [...PRODUCTS, ...Object.values(COLLECTION_DATA).flat()];
+  const favItems = allProds.filter(p => wishlist.includes(p.id));
+  
+  document.getElementById('wishlistItems').innerHTML = favItems.length === 0 ? 
+    '<p style="text-align:center; padding:30px; color:#9ca3af;">No favorites added yet.</p>' :
+    favItems.map(p => `
+      <div style="display:flex; gap:12px; margin-bottom:12px; background:#fcf8f2; padding:10px; border-radius:8px; align-items:flex-start;">
+        <img src="${p.img}" style="width:60px; height:60px; object-fit:cover; border-radius:6px; flex-shrink:0;">
+        <div style="flex:1;">
+          <div style="font-weight:700; font-size:14px;">${p.name}</div>
+          <div style="color:var(--leather); font-weight:800; margin-top:2px;">Rs. ${p.price}</div>
+        </div>
+        <div class="wishlist-item-actions">
+          <button onclick="addToCartById(${p.id})" style="background:#f3efea; color:var(--leather); border:1px solid var(--leather); border-radius:6px; padding:5px 8px; font-size:11px; font-weight:700;">Add</button>
+          <button onclick="toggleWishlist(${p.id})" style="background:#fee2e2; color:#dc2626; border:1px solid #fecdd3; border-radius:6px; padding:5px 8px; font-size:11px; font-weight:700;">&times;</button>
+        </div>
+      </div>`).join('');
+}
+
+function addToCartById(id, qty) {
+  qty = qty || 1;
+  const p = PRODUCTS.find(i => i.id === id) || Object.values(COLLECTION_DATA).flat().find(i => i.id === id);
+  if(p) {
+    for(let i = 0; i < qty; i++) { cart.push(p); }
+    updateCartUI();
+    showToast(qty > 1 ? `Added ${qty} to Bag!` : 'Added to Bag!');
+  }
+}
+
+function updateCartUI() {
+  document.getElementById('cartCount').textContent = cart.length;
+  document.getElementById('fabCartCount').textContent = cart.length;
+  let total = 0;
+  const grouped = [];
+  cart.forEach(item => {
+    const existing = grouped.find(g => g.id === item.id);
+    if(existing) { existing.qty += 1; } else { grouped.push({ ...item, qty: 1 }); }
+  });
+
+  document.getElementById('cartItems').innerHTML = grouped.length === 0 ?
+    '<p style="text-align:center; padding:30px; color:#9ca3af;">Your bag is empty.</p>' :
+    grouped.map((item) => {
+      total += item.price * item.qty;
+      return `
+        <div style="display:flex; gap:10px; margin-bottom:14px; align-items:center;">
+          <img src="${item.img}" style="width:50px; height:50px; object-fit:cover; border-radius:6px;">
+          <div style="flex:1;">
+            <div style="font-weight:700; font-size:14px;">${item.name}</div>
+            <div style="color:var(--leather); font-weight:700; font-size:13px;">Rs. ${item.price}</div>
+          </div>
+          <div class="qty-stepper" style="margin-bottom:0;">
+            <button type="button" onclick="changeCartQty(${item.id}, -1)">&minus;</button>
+            <span>${item.qty}</span>
+            <button type="button" onclick="changeCartQty(${item.id}, 1)">+</button>
+          </div>
+        </div>`;
+    }).join('');
+
+  document.getElementById('cartTotal').textContent = `Rs. ${total.toFixed(2)}`;
+  document.getElementById('summaryTotal').textContent = `Rs. ${total.toFixed(2)}`;
+  document.getElementById('summaryGrandTotal').textContent = `Rs. ${total.toFixed(2)}`;
+}
+
+function changeCartQty(id, delta) {
+  if(delta > 0) {
+    const p = PRODUCTS.find(i => i.id === id) || Object.values(COLLECTION_DATA).flat().find(i => i.id === id);
+    if(p) cart.push(p);
+  } else {
+    const idx = cart.findIndex(i => i.id === id);
+    if(idx > -1) cart.splice(idx, 1);
+  }
+  updateCartUI();
+}
+
+function openDrawer(id) { document.getElementById(id).classList.add('open'); document.getElementById('overlay').classList.add('open'); }
+function closeAll() { document.querySelectorAll('.drawer, .overlay').forEach(el => el.classList.remove('open')); closeModal(); closeNav(); }
+function openCheckout() { if(cart.length > 0) { closeAll(); openDrawer('checkoutDrawer'); } else { showToast('Your bag is empty!'); } }
+function showToast(msg) { const t = document.getElementById('toast'); t.textContent = msg; t.style.display = 'block'; setTimeout(() => t.style.display = 'none', 2000); }
+function confirmOrder(e) { e.preventDefault(); alert("Order Placed Successfully!"); cart=[]; updateCartUI(); closeAll(); }
+function selectPayment(el) { document.querySelectorAll('.payment-method-card').forEach(c => c.classList.remove('selected')); el.classList.add('selected'); el.querySelector('input').checked = true; }
+
+function toggleNav() {
+  document.getElementById('navLinks').classList.toggle('open');
+  document.getElementById('hamburgerBtn').classList.toggle('open');
+}
+function closeNav() {
+  document.getElementById('navLinks').classList.remove('open');
+  document.getElementById('hamburgerBtn').classList.remove('open');
+}
+
+const magicCircle = document.getElementById('magicCircle');
+const tiltImages = document.querySelectorAll('.tilt-img');
+if(magicCircle) {
+  magicCircle.addEventListener('mousemove', (e) => {
+    const rect = magicCircle.getBoundingClientRect();
+    const x = (e.clientX - rect.left - rect.width / 2) / 10;
+    const y = (e.clientY - rect.top - rect.height / 2) / 10;
+    tiltImages.forEach(img => { img.style.transform = `translate(${x}px, ${y}px) scale(1.1)`; });
+  });
+  magicCircle.addEventListener('mouseleave', () => { tiltImages.forEach(img => { img.style.transform = `translate(0, 0) scale(1)`; }); });
+}
+
+const slides = document.querySelectorAll('.slide');
+let currentSlide = 0;
+if(slides.length > 0) {
+  setInterval(() => {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+  }, 4000);
+}
+
+renderProducts();
+</script>
+</body>
+</html>
